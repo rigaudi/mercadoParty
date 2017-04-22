@@ -8,24 +8,27 @@
     <head> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<link rel="icon" type="image/x-icon" href="img/unlam.jpg"/>
 
 		<!-- Website CSS style -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-
 		<!-- Website Font style -->
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="css/estilos.css"/>
 		<!-- Google Fonts -->
 		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-
+		
+		
 		<title>Registrar Usuario</title>
 	</head>
 	<body>
+	
 		<div class="container">
 			<div class="row main">
 				<div class="main-login main-center">
-				<h1>Registrar Usuario.</h1>
+				<h1 id="titulo">Registrate en MercadoParty!</h1>
 					<form:form action="registrar-usuario" method="POST" modelAttribute="usuario">
 					
 
