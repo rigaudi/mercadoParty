@@ -33,3 +33,6 @@ public class Consumidor {
 		this.password = password;
 	}
 }
+
+
+//Probando para commitiar todo arreglado

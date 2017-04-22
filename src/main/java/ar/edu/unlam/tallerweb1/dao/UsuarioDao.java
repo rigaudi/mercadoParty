@@ -6,3 +6,6 @@ public interface UsuarioDao {
 	
 	Oferente consultarUsuario (Oferente usuario);
 }
+
+
+
