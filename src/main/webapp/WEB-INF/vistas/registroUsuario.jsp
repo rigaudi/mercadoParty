@@ -24,7 +24,7 @@
 		<title>Registrar Usuario</title>
 	</head>
 	<body>
-	
+	<img alt="" src="img/unlam.ico">
 		<div class="container">
 			<div class="row main">
 				<div class="main-login main-center">
