@@ -8,4 +8,6 @@
 
 <!-- Probando la sincronizacion, vamos a usar este archivo para ir probandolas
 	2/5 JERO COMMIT
+	
+	No te cambio nada 2/5 es para ver si comitea !
  -->
