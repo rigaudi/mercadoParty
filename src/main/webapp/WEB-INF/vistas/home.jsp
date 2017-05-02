@@ -1,37 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <title>Mercado Party</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css"> 
- <link rel="stylesheet" href="css/estilos.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+	<head>
+	  <title>Mercado Party</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css"> 
+	  <link rel="stylesheet" href="css/estilos.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
 <body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">	
-	<div class="navbar-header">
-	      <a href="#"><img class="img-responsive" src="img/logo.png" alt="logo"/></a>
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">                      
-      </button>
-    </div>
-    
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-            <div class="input-group" id="adv-search">
+	<div id="navegador" class="navbar navbar-inverse">
+		<div class="col-sm-3">
+			<a href="#"><img class="img-responsive" id="logo" src="img/logo.png" alt="logo"/></a>
+		</div>
+  
+	<div class="col-sm-6">
+	            <div class="input-group" id="adv-search">
                 <input type="text" class="form-control" placeholder="Buscar Servicios" />
                 <div class="input-group-btn">
                     <div class="btn-group" role="group">
@@ -56,9 +44,16 @@
                     </div>
                 </div>
             </div>
-          </div>
-        </div>
   </div>
+  
+	<div class="col-sm-3">      
+	<ul class="nav navbar-nav navbar-right">
+        <li>
+			<a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+		</li>
+     </ul>
+	</div>
+</div>
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
@@ -77,7 +72,7 @@
       </div>
 
       <div class="item">
-        <img src="img/publicidad01.png" alt="Image">
+        <img src="img/publicidad03.png" alt="Image">
         <div class="carousel-caption">
         </div>      
       </div>
