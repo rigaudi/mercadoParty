@@ -5,3 +5,7 @@
 	 <a href="#" class="icon-button pinterest"><i class="icon-pinterest"></i><span></span></a>
   </div>
 </footer>
+
+<!-- Probando la sincronizacion, vamos a usar este archivo para ir probandolas
+	2/5 JERO COMMIT
+ -->
