@@ -3,8 +3,10 @@
 	<head>
 	  <title>Mercado Party</title>
 	  <meta charset="utf-8">
+	  <meta charset="UTF-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
    	  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css"> 
+   	  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
    	  <link rel="stylesheet" href="css/estilos.css">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,11 +15,11 @@
 
 <body>
 		<nav id="navegador" class="navbar navbar-inverse">
-		<div class="col-sm-3">
+		<div class="col-sm-3" id="primercolumna">
 			<a href="#"><img class="img-responsive" id="logo" src="img/logo.png" alt="logo"/></a>
 		</div>
   
-		<div class="col-sm-6">
+		<div class="col-sm-6" id="segundacolumna">
 	            <div class="input-group" id="adv-search">
                 <input type="text" class="form-control" placeholder="Buscar Servicios" />
                 <div class="input-group-btn">
@@ -45,12 +47,48 @@
             </div>
   		</div>
   
-		<div class="col-sm-3">      
+		<div class="col-sm-3" id="terceracolumna">      
 			<ul class="nav navbar-nav navbar-right">
-       			<li>
-					<a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-				</li>
-     		</ul>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Inicia Sesion</b> <span class="caret"></span></a>
+      <ul id="login-dp" class="dropdown-menu">
+        <li>
+           <div class="row">
+              <div class="col-md-12">
+                Inicia via
+                <div class="social-buttons">
+                  <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                  <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                </div>
+                                o
+                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                    <div class="form-group">
+                       <label class="sr-only" for="exampleInputEmail2">E-Mail</label>
+                       <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Correo Electronico" required>
+                    </div>
+                    <div class="form-group">
+                       <label class="sr-only" for="exampleInputPassword2">Contraseña</label>
+                       <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Contraseña" required>
+                                             <div class="help-block text-right"><a href="">Olvido su contraseña ?</a></div>
+                    </div>
+                    <div class="form-group">
+                       <button type="submit" class="btn btn-primary btn-block">Inicia Sesion</button>
+                    </div>
+                    <div class="checkbox">
+                       <label>
+                       <input type="checkbox"> Mantenerme conectado
+                       </label>
+                    </div>
+                 </form>
+              </div>
+              <div class="bottom text-center">
+                Eres nuevo ? <a href="#"><b>Unete</b></a>
+              </div>
+           </div>
+        </li>
+      </ul>
+        </li>
+      </ul>
 		</div>
 	</nav>
 
