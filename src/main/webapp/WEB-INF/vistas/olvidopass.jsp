@@ -1,22 +1,21 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html lang="es">
+<html>
 	<head>
-	  <title>Mercado Party</title>
-	  <meta charset="utf-8">
-	  <meta charset="UTF-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
    	  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css"> 
    	  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
    	  <link rel="stylesheet" href="css/estilos.css">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	    
 	</head>
-
-<body>
-		<nav id="navegador" class="navbar navbar-inverse">
+	<body>
+	
+	<nav id="navegador" class="navbar navbar-inverse">
 		<div class="col-sm-3" id="primercolumna">
-			<a href="#"><img class="img-responsive" id="logo" src="img/logo.png" alt="logo"/></a>
+			<a href="/mercadoParty/home"><img class="img-responsive" id="logo" src="img/logo.png" alt="logo"/></a>
 		</div>
   
 		<div class="col-sm-6" id="segundacolumna">
@@ -69,7 +68,7 @@
                     <div class="form-group">
                        <label class="sr-only" for="exampleInputPassword2">Contraseña</label>
                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Contraseña" required>
-                                             <div class="help-block text-right"><a href="/mercadoParty/olvidopass">Olvido su contraseña ?</a></div>
+                                             <div class="help-block text-right"><a href="">Olvido su contraseña ?</a></div>
                     </div>
                     <div class="form-group">
                        <button type="submit" class="btn btn-primary btn-block">Inicia Sesion</button>
@@ -91,50 +90,41 @@
       </ul>
 		</div>
 	</nav>
-
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-    <!-- Imagenes del slider -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="img/publicidad01.png" alt="Image">
-        <div class="carousel-caption">
-        </div>      
-      </div>
-
-      <div class="item">
-        <img src="img/publicidad02.png" alt="Image">
-        <div class="carousel-caption">
-        </div>      
-      </div>
-
-      <div class="item">
-        <img src="img/publicidad03.png" alt="Image">
-        <div class="carousel-caption">
-        </div>      
-      </div>
-
-      <div class="item">
-        <img src="img/publicidad05.png" alt="Image">
-        <div class="carousel-caption">
-        </div>      
-      </div>
-
+	<br><br>
+		<div class="container">
+    <div class="row">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="text-center">
+                          <h3><i class="fa fa-lock fa-4x"></i></h3>
+                          <h2 class="text-center">Olvido su clave?</h2>
+                          <p>Puede pedir una nueva desde aqui.</p>
+                            <div class="panel-body">
+                              
+                              <form class="form">
+                                <fieldset>
+                                  <div class="form-group">
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                      
+                                      <input id="emailInput" placeholder="Direccion de email" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <input class="btn btn-lg btn-primary btn-block" value="Pedir nueva clave" type="submit">
+                                  </div>
+                                </fieldset>
+                              </form>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
 </div>
-
-<jsp:include page="footer.jsp" />
-
-</body>
+	</body>
 </html>

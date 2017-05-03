@@ -53,4 +53,10 @@ public class ControladorLogin {
 	public ModelAndView iraRegistro() {
 		return new ModelAndView("registroUsuario");
 	}
+	
+	@RequestMapping(path = "/olvidopass", method = RequestMethod.GET)
+	public ModelAndView iraOlvidopass() {
+		return new ModelAndView("olvidopass");
+	}
+	
 }
