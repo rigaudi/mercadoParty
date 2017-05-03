@@ -29,6 +29,7 @@
 		</div>
 		
 		<!-- Placed at the end of the document so the pages load faster -->
+		<!-- Nadia Probando 1 2 3 -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" ></script>
 		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 		<script src="js/bootstrap.min.js" type="text/javascript"></script>
