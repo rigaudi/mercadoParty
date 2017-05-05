@@ -49,9 +49,14 @@ public class ControladorLogin {
 		return new ModelAndView("redirect:/home");
 	}
 
-	@RequestMapping(path = "/registroUsuario", method = RequestMethod.GET)
+	/*@RequestMapping(path = "/registroUsuario", method = RequestMethod.GET)
 	public ModelAndView iraRegistro() {
 		return new ModelAndView("registroUsuario");
+	}*/
+	
+	@RequestMapping(path = "/registro", method = RequestMethod.GET)
+	public ModelAndView iraRegistro() {
+		return new ModelAndView("registro");
 	}
 	
 	@RequestMapping(path = "/olvidopass", method = RequestMethod.GET)

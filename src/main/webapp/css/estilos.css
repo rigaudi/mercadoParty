@@ -1,7 +1,9 @@
 #titulo {
-	color: orange;
-	font-family: helvetica;
-	font-weight: lighter;
+    color: #3B5998;
+    font-family: helvetica;
+    font-weight: lighter;
+    margin-top:100px;
+
 }
 
 #navegador{
