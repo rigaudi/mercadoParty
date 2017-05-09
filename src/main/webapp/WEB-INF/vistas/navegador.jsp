@@ -1,3 +1,6 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 		<nav id="navegador" class="navbar navbar-inverse">
 		<div class="col-sm-3" id="primercolumna">
 			<a href="/mercadoParty/"><img class="img-responsive" id="logo" src="img/logo.png" alt="logo"/></a>
@@ -45,25 +48,25 @@
                   <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
                 </div>
                                 o
-                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                 <form:form class="form" method="post" action="validar-login" modelAttribute="usuario" id="login-nav">
                     <div class="form-group">
                        <label class="sr-only" for="exampleInputEmail2">E-Mail</label>
-                       <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Correo Electronico" required>
+                       <form:input path="email" type="email" class="form-control" id="exampleInputEmail2" placeholder="Correo Electronico" />
                     </div>
                     <div class="form-group">
                        <label class="sr-only" for="exampleInputPassword2">Contraseña</label>
-                       <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Contraseña" required>
+                       <form:input path="password" type="password" class="form-control" id="exampleInputPassword2" placeholder="Contraseña" />
                                              <div class="help-block text-right"><a href="/mercadoParty/olvidopass">Olvido su contraseña ?</a></div>
                     </div>
                     <div class="form-group">
-                       <button type="submit" class="btn btn-primary btn-block">Inicia Sesion</button>
+                       <button type="submit" value="login" class="btn btn-primary btn-block">Inicia Sesion</button>
                     </div>
                     <div class="checkbox">
                        <label>
                        <input type="checkbox"> Mantenerme conectado
                        </label>
                     </div>
-                 </form>
+                 </form:form>
               </div>
               <div class="bottom text-center">
                 Eres nuevo ? <a href="/mercadoParty/registro"><b>Unete</b></a>

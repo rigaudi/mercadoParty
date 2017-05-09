@@ -1,3 +1,6 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -44,7 +47,7 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 									  <span class="input-group-addon" id="basic-addon1">1.</span>
-									  <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" aria-describedby="basic-addon1">
+									  <input type="text" class="form-control" path="nombre" id="nombre" placeholder="Nombre" aria-describedby="basic-addon1">
 									</div>
 								</div>
 						</div>
