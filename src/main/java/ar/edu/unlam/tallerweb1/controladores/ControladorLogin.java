@@ -66,6 +66,15 @@ public class ControladorLogin {
 		return new ModelAndView("home");
 	}
 	
+	@RequestMapping(path = "/detalleProducto", method = RequestMethod.GET)
+	public ModelAndView iraDetalleProducto() {
+		ModelMap modelo = new ModelMap();
+		Oferente usuario = new Oferente();
+		modelo.put("usuario", usuario);
+		return new ModelAndView("detalleProducto",modelo);
+	}
+	
+	
 }
 
 //@RequestMapping(path = "/validar-login", method = RequestMethod.POST)
