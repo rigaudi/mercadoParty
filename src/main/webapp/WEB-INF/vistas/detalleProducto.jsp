@@ -38,15 +38,15 @@
 								<div class="carousel-inner">
 									<!-- Slide 1 -->
 									<div class="item active">
-										<img src="http://lorempixel.com/300/300/technics/1/" alt="">
+										<img src="img/nadialogo.png" alt="">
 									</div>
 									<!-- Slide 2 -->
 									<div class="item">
-										<img src="http://lorempixel.com/300/300/technics/1/" alt="">
+										<img src="img/fotprod1.png" alt="">
 									</div>
 									<!-- Slide 3 -->
 									<div class="item">
-										<img src="http://lorempixel.com/300/300/technics/1/" alt="">
+										<img src="img/fotprod2.png" alt="">
 									</div>
 								</div>
 								<a class="left carousel-control" href="#myCarousel-2" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>

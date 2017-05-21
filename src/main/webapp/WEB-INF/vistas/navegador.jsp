@@ -14,7 +14,7 @@
                         <div class="dropdown dropdown-lg">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
                             <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <form class="form-horizontal" role="form">
+                                <form class="form-horizontal" action="/mercadoParty/listaProductos" role="form">
                                   <div class="form-group">
                                     <label for="filter">Filtrar por Zona</label>
                                     <select class="form-control">
@@ -28,7 +28,7 @@
                                 </form>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                       <a href="/mercadoParty/listaProductos"><button type="button" onclick class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></a>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                 Inicia via
                 <div class="social-buttons">
                   <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-                  <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                  <a href="#" class="btn btn-gplus"><i class="fa fa-google-plus"></i> Google</a>
                 </div>
                                 o
                  <form:form class="form" method="post" action="validar-login" modelAttribute="usuario" id="login-nav">

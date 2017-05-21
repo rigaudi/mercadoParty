@@ -28,52 +28,6 @@ public class ControladorLogin {
 		return new ModelAndView("login", modelo);
 	}
 	
-	@RequestMapping(path = "/home", method = RequestMethod.GET)
-	public ModelAndView irAHome() {
-		ModelMap modelo = new ModelMap();
-		Oferente usuario = new Oferente();
-		modelo.put("usuario", usuario);
-		return new ModelAndView("home",modelo);
-	}
-	
-	@RequestMapping(path = "/", method = RequestMethod.GET)
-	public ModelAndView inicio() {
-		return new ModelAndView("redirect:/home");
-	}
-	
-	@RequestMapping(path = "/registro", method = RequestMethod.GET)
-	public ModelAndView iraRegistro() {
-		ModelMap modelo = new ModelMap();
-		Oferente usuario = new Oferente();
-		modelo.put("usuario", usuario);
-		return new ModelAndView("registro",modelo);
-	}
-	
-	@RequestMapping(path = "/olvidopass", method = RequestMethod.GET)
-	public ModelAndView iraOlvidopass() {
-		ModelMap modelo = new ModelMap();
-		Oferente usuario = new Oferente();
-		modelo.put("usuario", usuario);
-		return new ModelAndView("olvidopass",modelo);
-	}
-	
-	@RequestMapping(path="/validar-login", method = RequestMethod.POST)	
-	public ModelAndView addContact(@ModelAttribute("usuario") Consumidor persona ) {
-		ModelMap model = new ModelMap();
-		System.out.println(persona.getEmail());
-		System.out.println(persona.getPassword());
-		model.put("persona", persona);
-		return new ModelAndView("home");
-	}
-	
-	@RequestMapping(path = "/detalleProducto", method = RequestMethod.GET)
-	public ModelAndView iraDetalleProducto() {
-		ModelMap modelo = new ModelMap();
-		Oferente usuario = new Oferente();
-		modelo.put("usuario", usuario);
-		return new ModelAndView("detalleProducto",modelo);
-	}
-	
 	
 }
 
