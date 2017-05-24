@@ -14,8 +14,7 @@
 <!-- Inicio Form-->
 
 
-
-<div class="container">
+<div class="container ">
 			<div class="row main">
 				<div class="main-login main-center">
 
@@ -25,7 +24,10 @@
 				    <li><a data-toggle="tab" href="#menu2">Registrate como Empresa</a></li>
 				    </ul>
 
-					<form:form action="registrar-usuario" method="POST" modelAttribute="usuario">
+
+				<div class="col-sm-4 col-sm-offset-4">    
+
+					<form:form action="/mercadoParty/detalleProducto" method="POST" modelAttribute="usuario">
 
 			
 					
@@ -34,51 +36,51 @@
      					 <h3>Comenzá ahora, miles de servicios te estan esperando!</h3>
 
 						
-						<div class="form-group">
-								<div class="cols-sm-10">
+						<div class="form-group ">
+								
 									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">1.</span>
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 									  <input type="text" class="form-control" path="nombre" id="nombre" placeholder="Nombre" aria-describedby="basic-addon1">
 									</div>
-								</div>
+								
 						</div>
 
 								
-						<div class="form-group">
-								<div class="cols-sm-10">
+						<div class="form-group ">
+								
 									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">2.</span>
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-font"></i></span>
 									  <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido" aria-describedby="basic-addon1">
-									</div>
+									
 								</div>
 						</div>
 
 		
 						<div class="form-group">
-								<div class="cols-sm-10">
+								
 									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">3.</span>
+									  <span class="input-group-addon" id="basic-addon1">@</span>
 									  <input type="text" class="form-control" name="email" id="email" placeholder="Correo Electrónico" aria-describedby="basic-addon1">
 									</div>
-								</div>
+								
 						</div>
 
 						<div class="form-group">
-								<div class="cols-sm-10">
+								
 									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">4.</span>
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
 									  <input type="text" class="form-control" name="password" id="password" placeholder="Contraseña" aria-describedby="basic-addon1">
 									</div>
-								</div>
+								
 						</div>
 
 							<div class="form-group">
-								<div class="cols-sm-10">
+								
 									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">5.</span>
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-repeat"></i></span>
 									  <input type="text" class="form-control" name="confirm" id="confirm" placeholder="Confirme Contraseña" aria-describedby="basic-addon1">
 									</div>
-								</div>
+								
 						</div>
 
 						</div>
@@ -91,47 +93,47 @@
 			
 
 							    <div class="form-group">
-								<div class="cols-sm-10">
+								
 									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">1.</span>
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 									  <input type="text" class="form-control" name="nombreEmp" id="nombreEmp" placeholder="Nombre" aria-describedby="basic-addon1">
 									</div>
-								</div>
+								
 						</div>
 
 								
 						<div class="form-group">
-								<div class="cols-sm-10">
+								
 									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">2.</span>
+									  <span class="input-group-addon" id="basic-addon1">@</span>
 									  <input type="text" class="form-control" name="emailEmp" id="emailEmp" placeholder="Correo Electrónico" aria-describedby="basic-addon1">
 									</div>
-								</div>
+								
 						</div>
 
 		
 						<div class="form-group">
-								<div class="cols-sm-10">
+								
 									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">3.</span>
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
 									  <input type="text" class="form-control" name="tel" id="tel" placeholder="Teléfono" aria-describedby="basic-addon1">
 									</div>
-								</div>
+								
 						</div>
 
 						<div class="form-group">
-								<div class="cols-sm-10">
+								
 									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">4.</span>
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
 									  <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Dirección" aria-describedby="basic-addon1">
 									</div>
-								</div>
+								
 						</div>
 
 							<div class="form-group">
-								<div class="cols-sm-6">
+								
 									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">5.</span>
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
 									    <select class="form-control" >
 									   <option default>¿En qué zona se encuentra?</option>
                                         <option value="0">Capital Federal</option>
@@ -140,26 +142,26 @@
                                         <option value="3">Zona Norte</option>
                                     </select>
 									</div>
-								</div>
+								
 						</div>
 
 								<div class="form-group">
-								<div class="cols-sm-10">
+								
 									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">6.</span>
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
 									  <input type="text" class="form-control" name="passwordEmp" id="passwordEmp" placeholder="Contraseña" aria-describedby="basic-addon1">
 									</div>
-								</div>
+								
 						</div>
 
 
 								<div class="form-group">
-								<div class="cols-sm-10">
+								
 									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">7.</span>
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-repeat"></i></span>
 									  <input type="text" class="form-control" name="confirmEmp" id="confirmEmp" placeholder="Confirme Contraseña" aria-describedby="basic-addon1">
 									</div>
-								</div>
+								
 						</div>
 
 
@@ -173,9 +175,11 @@
 						</div>
 <!--             <button type="submit" class="btn btn-success">Registrar</button> -->						
 					</form:form> 
+				</div>	
 				</div>
 			</div>
 		</div>
+
 
 
 

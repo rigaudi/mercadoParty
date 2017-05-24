@@ -28,7 +28,7 @@
     <div id="products" class="row list-group">
     
     <c:forEach var = "i" begin = "1" end = "6">
-         <div class="item  col-xs-4 col-lg-4">
+         <div class="item  col-xs-3 col-lg-3">
             <div class="thumbnail">
                 <img class="group list-group-image" src="img/nadialogo.png" alt="" />
                 <div class="caption">
@@ -36,7 +36,7 @@
                         Fotografias Nadia</h4>
                     <p class="group inner list-group-item-text">
                         Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        sed diam nonummy nibh euismo.</p>
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <p class="lead">
