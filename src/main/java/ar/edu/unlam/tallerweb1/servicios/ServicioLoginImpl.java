@@ -1,12 +1,10 @@
 package ar.edu.unlam.tallerweb1.servicios;
 
 import javax.inject.Inject;
-
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import ar.edu.unlam.tallerweb1.dao.UsuarioDao;
-import ar.edu.unlam.tallerweb1.modelo.Oferente;
+import ar.edu.unlam.tallerweb1.modelo.Consumidor;
 
 
 @Service("servicioLogin")
@@ -17,8 +15,8 @@ public class ServicioLoginImpl implements ServicioLogin {
 	private UsuarioDao servicioLoginDao;
 
 	@Override
-	public Oferente consultarUsuario (Oferente usuario) {
-		return servicioLoginDao.consultarUsuario(usuario);
+	public Consumidor consultarUsuario (Consumidor persona) {
+		return servicioLoginDao.consultarUsuario(persona);
 	}
 
 }

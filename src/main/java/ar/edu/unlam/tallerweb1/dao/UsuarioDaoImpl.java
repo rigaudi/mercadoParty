@@ -6,22 +6,20 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Service;
-
-import ar.edu.unlam.tallerweb1.modelo.Oferente;
+import ar.edu.unlam.tallerweb1.modelo.Consumidor;
 
 @Service("usuarioDao")
 public class UsuarioDaoImpl implements UsuarioDao {
 
 	@Inject
     private SessionFactory sessionFactory;
-
 	@Override
-	public Oferente consultarUsuario(Oferente usuario) {
+	public Consumidor consultarUsuario(Consumidor persona) {
 
 		final Session session = sessionFactory.openSession();
-		return (Oferente) session.createCriteria(Oferente.class)
-				.add(Restrictions.eq("email", usuario.getEmail()))
-				.add(Restrictions.eq("password", usuario.getPassword()))
+		return (Consumidor) session.createCriteria(Consumidor.class)
+				.add(Restrictions.eq("email", persona.getEmail()))
+				.add(Restrictions.eq("password", persona.getPassword()))
 				.uniqueResult();
 	}
 

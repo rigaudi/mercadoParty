@@ -1,10 +1,10 @@
 package ar.edu.unlam.tallerweb1.dao;
 
-import ar.edu.unlam.tallerweb1.modelo.Oferente;
+import ar.edu.unlam.tallerweb1.modelo.Consumidor;
 
 public interface UsuarioDao {
-	
-	Oferente consultarUsuario (Oferente usuario);
+
+	Consumidor consultarUsuario(Consumidor persona);
 }
 
 
