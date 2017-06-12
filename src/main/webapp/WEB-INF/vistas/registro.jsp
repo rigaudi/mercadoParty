@@ -27,34 +27,16 @@
 
 				<div class="col-sm-4 col-sm-offset-4">    
 
-					<form:form action="/mercadoParty/detalleProducto" method="POST" modelAttribute="usuario">
+					
 
 			
 					
 					  <div class="tab-content">
     					<div id="menu1" class="tab-pane fade in active">
+    					
      					 <h3>Comenzá ahora, miles de servicios te estan esperando!</h3>
 
-						
-						<div class="form-group ">
-								
-									<div class="input-group">
-									  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									  <input type="text" class="form-control" path="nombre" id="nombre" placeholder="Nombre" aria-describedby="basic-addon1">
-									</div>
-								
-						</div>
-
-								
-						<div class="form-group ">
-								
-									<div class="input-group">
-									  <span class="input-group-addon"><i class="glyphicon glyphicon-font"></i></span>
-									  <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido" aria-describedby="basic-addon1">
-									
-								</div>
-						</div>
-
+						<form:form action="/mercadoParty/agregarConsumidor" method="POST" modelAttribute="usuario">
 		
 						<div class="form-group">
 								
@@ -82,16 +64,19 @@
 									</div>
 								
 						</div>
-
+						<div class="form-group ">
+						 <button type="submit" class="btn btn-success">Registrar</button>
+						</div>
+						</form:form> 
 						</div>
 
-
+<!--
 							    <div id="menu2" class="tab-pane fade">
 							      <h3>Sé parte de Mercado Party y obtené beneficios</h3>
 							      <p>*Los datos que ingresará a continuación son propios de su Empresa/Comercio. Tenga en cuenta que estos datos pueden ser públicos dentro de sus publicaciones.</p>
 				
 			
-
+							<form:form action="/mercadoParty/home" method="POST" modelAttribute="consumidor">
 							    <div class="form-group">
 								
 									<div class="input-group">
@@ -163,18 +148,15 @@
 									</div>
 								
 						</div>
-
-
-						</div>
-
-						</div>
-
 						<div class="form-group ">
-<!-- 							<a href="http://deepak646.blogspot.in" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Register</a> -->
+
 						 <button type="submit" class="btn btn-success">Registrar</button>
 						</div>
-<!--             <button type="submit" class="btn btn-success">Registrar</button> -->						
-					</form:form> 
+						</form:form>  -->
+
+						</div>
+
+						</div>
 				</div>	
 				</div>
 			</div>

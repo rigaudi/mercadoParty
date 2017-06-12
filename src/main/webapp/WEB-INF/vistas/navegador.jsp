@@ -28,7 +28,7 @@
                                 </form>
                             </div>
                         </div>
-                       <a href="/mercadoParty/listaProductos"><button type="button" onclick class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></a>
+                       <a href="/mercadoParty/listaProductos"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></a>
                     </div>
                 </div>
             </div>
