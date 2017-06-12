@@ -42,7 +42,7 @@
 								
 									<div class="input-group">
 									  <span class="input-group-addon" id="basic-addon1">@</span>
-									  <input type="text" class="form-control" name="email" id="email" placeholder="Correo Electrónico" aria-describedby="basic-addon1">
+									  <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electrónico" aria-describedby="basic-addon1" required>
 									</div>
 								
 						</div>
@@ -51,7 +51,7 @@
 								
 									<div class="input-group">
 									  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-									  <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña" aria-describedby="basic-addon1">
+									  <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña" aria-describedby="basic-addon1" required>
 									</div>
 								
 						</div>
@@ -60,7 +60,7 @@
 								
 									<div class="input-group">
 									  <span class="input-group-addon"><i class="glyphicon glyphicon-repeat"></i></span>
-									  <input type="password" class="form-control" name="confirm" id="confirm_password" placeholder="Confirme Contraseña" aria-describedby="basic-addon1">
+									  <input type="password" class="form-control" name="confirm" id="confirm_password" placeholder="Confirme Contraseña" aria-describedby="basic-addon1" required>
 									</div>
 									<script>
 									var password = document.getElementById("password")
