@@ -51,7 +51,7 @@
 								
 									<div class="input-group">
 									  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-									  <input type="text" class="form-control" name="password" id="password" placeholder="Contraseña" aria-describedby="basic-addon1">
+									  <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña" aria-describedby="basic-addon1">
 									</div>
 								
 						</div>
@@ -60,8 +60,23 @@
 								
 									<div class="input-group">
 									  <span class="input-group-addon"><i class="glyphicon glyphicon-repeat"></i></span>
-									  <input type="text" class="form-control" name="confirm" id="confirm" placeholder="Confirme Contraseña" aria-describedby="basic-addon1">
+									  <input type="password" class="form-control" name="confirm" id="confirm_password" placeholder="Confirme Contraseña" aria-describedby="basic-addon1">
 									</div>
+									<script>
+									var password = document.getElementById("password")
+									  , confirm_password = document.getElementById("confirm_password");
+
+									function validatePassword(){
+									  if(password.value != confirm_password.value) {
+									    confirm_password.setCustomValidity("No son iguales");
+									  } else {
+									    confirm_password.setCustomValidity('');
+									  }
+									}
+
+									password.onchange = validatePassword;
+									confirm_password.onkeyup = validatePassword;									
+									</script>
 								
 						</div>
 						<div class="form-group ">
