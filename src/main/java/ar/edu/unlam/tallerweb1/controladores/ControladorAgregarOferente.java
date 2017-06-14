@@ -3,26 +3,28 @@ package ar.edu.unlam.tallerweb1.controladores;
 
 
 import javax.inject.Inject;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import ar.edu.unlam.tallerweb1.modelo.Consumidor;
-import ar.edu.unlam.tallerweb1.servicios.ServicioConsumidor;
+import ar.edu.unlam.tallerweb1.modelo.Oferente;
+import ar.edu.unlam.tallerweb1.servicios.ServicioOferente;
 
 
 
 @Controller
-public class ControladorAgregarConsumidor {
+public class ControladorAgregarOferente {
 	
-	@Inject
-	private ServicioConsumidor servicioconsumidor;
+//	@Inject
+//	private ServicioOferente serviciooferente;
 	
-	@RequestMapping(path ="/agregarConsumidor", method = RequestMethod.POST)
-	public ModelAndView cargarUsuario(@ModelAttribute("usuario")Consumidor usuario) {
-		servicioconsumidor.guardarConsumidor(usuario);
+	@RequestMapping(path ="/agregarOferente", method = RequestMethod.POST)
+	public ModelAndView cargarUsuario(@ModelAttribute("oferente")Oferente usuario) {
+//		serviciooferente.guardarOferente(usuario);
 		return new ModelAndView("home");
 		}
+	
 }
 

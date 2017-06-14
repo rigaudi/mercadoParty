@@ -63,8 +63,114 @@
 									  <input type="password" class="form-control" name="confirm" id="confirm_password" placeholder="Confirme Contraseña" aria-describedby="basic-addon1" required>
 									</div>
 									<script>
-									var password = document.getElementById("password")
-									  , confirm_password = document.getElementById("confirm_password");
+									var pass = document.getElementById("password")
+									  , confirm_pass = document.getElementById("confirm_password");
+
+									function validatePassword(){
+									  if(pass.value != confirm_pass.value) {
+									    confirm_pass.setCustomValidity("No son iguales");
+									  } else {
+									    confirm_pass.setCustomValidity('');
+									  }
+									}
+
+									pass.onchange = validatePassword;
+									confirm_pass.onkeyup = validatePassword;									
+									</script>
+								
+						</div>
+						<div class="form-group ">
+						 <button type="submit" class="btn btn-success">Registrar</button>
+						</div>
+						</form:form> 
+						</div>
+
+
+							    <div id="menu2" class="tab-pane fade">
+							      <h3>Sé parte de Mercado Party y obtené beneficios</h3>
+							      <p>*Los datos que ingresará a continuación son propios de su Empresa/Comercio. Tenga en cuenta que estos datos pueden ser públicos dentro de sus publicaciones.</p>
+				
+			
+							<form:form action="/mercadoParty/agregarOferente" method="POST" modelAttribute="oferente">
+							    <div class="form-group">
+								
+									<div class="input-group">
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									  <input type="text" class="form-control" name="nombreOferente" id="nombreOferente" placeholder="Nombre" aria-describedby="basic-addon1" required>
+									</div>
+								
+						</div>
+
+								
+						<div class="form-group">
+								
+									<div class="input-group">
+									  <span class="input-group-addon" id="basic-addon1">@</span>
+									  <input type="email" class="form-control" name="emailOferente" id="emailOferente" placeholder="Correo Electrónico" aria-describedby="basic-addon1" required>
+									</div>
+								
+						</div>
+
+		
+						<div class="form-group">
+								
+									<div class="input-group">
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+									  <input type="tel" class="form-control" name="telefonoOferente" id="telefonoOferente" placeholder="Teléfono" aria-describedby="basic-addon1" required>
+									</div>
+								
+						</div>
+
+						<div class="form-group">
+								
+									<div class="input-group">
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+									  <input type="text" class="form-control" name="direccionOferente" id="direccionOferente" placeholder="Dirección" aria-describedby="basic-addon1" required>
+									</div>
+								
+						</div>
+
+							<div class="form-group">
+								
+								<div class="input-group">
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+									  <input type="text" class="form-control" name="zonaOferente" id="zonaOferente" placeholder="Zona" aria-describedby="basic-addon1" required>
+								</div>
+									
+									<!-- <div class="input-group">
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+									    <select class="form-control" id="zonaOferente" name="zonaOferente" required>
+									   <option>¿En qué zona se encuentra?</option>
+                                        <option value="0">Capital Federal</option>
+                                        <option value="1">Zona Sur</option>
+                                        <option value="2">Zona Oeste</option>
+                                        <option value="3">Zona Norte</option>
+                                    </select>
+									</div> -->
+								
+						</div>
+
+								<div class="form-group">
+								
+									<div class="input-group">
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+									  <input type="password" class="form-control" name="passwordOferente" id="passwordOferente" placeholder="Contraseña" aria-describedby="basic-addon1" required>
+									</div>
+								
+						</div>
+
+
+								<div class="form-group">
+								
+									<div class="input-group">
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-repeat"></i></span>
+									  <input type="password" class="form-control" name="confirmEmp" id="confirmEmp" placeholder="Confirme Contraseña" aria-describedby="basic-addon1" required>
+									</div>
+								
+								</div>
+								<script>
+									var password = document.getElementById("passwordOferente")
+									  , confirm_password = document.getElementById("confirmEmp");
 
 									function validatePassword(){
 									  if(password.value != confirm_password.value) {
@@ -77,97 +183,11 @@
 									password.onchange = validatePassword;
 									confirm_password.onkeyup = validatePassword;									
 									</script>
-								
-						</div>
-						<div class="form-group ">
-						 <button type="submit" class="btn btn-success">Registrar</button>
-						</div>
-						</form:form> 
-						</div>
-
-<!--
-							    <div id="menu2" class="tab-pane fade">
-							      <h3>Sé parte de Mercado Party y obtené beneficios</h3>
-							      <p>*Los datos que ingresará a continuación son propios de su Empresa/Comercio. Tenga en cuenta que estos datos pueden ser públicos dentro de sus publicaciones.</p>
-				
-			
-							<form:form action="/mercadoParty/home" method="POST" modelAttribute="consumidor">
-							    <div class="form-group">
-								
-									<div class="input-group">
-									  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									  <input type="text" class="form-control" name="nombreEmp" id="nombreEmp" placeholder="Nombre" aria-describedby="basic-addon1">
-									</div>
-								
-						</div>
-
-								
-						<div class="form-group">
-								
-									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">@</span>
-									  <input type="text" class="form-control" name="emailEmp" id="emailEmp" placeholder="Correo Electrónico" aria-describedby="basic-addon1">
-									</div>
-								
-						</div>
-
-		
-						<div class="form-group">
-								
-									<div class="input-group">
-									  <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-									  <input type="text" class="form-control" name="tel" id="tel" placeholder="Teléfono" aria-describedby="basic-addon1">
-									</div>
-								
-						</div>
-
-						<div class="form-group">
-								
-									<div class="input-group">
-									  <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-									  <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Dirección" aria-describedby="basic-addon1">
-									</div>
-								
-						</div>
-
-							<div class="form-group">
-								
-									<div class="input-group">
-									  <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-									    <select class="form-control" >
-									   <option default>¿En qué zona se encuentra?</option>
-                                        <option value="0">Capital Federal</option>
-                                        <option value="1">Zona Sur</option>
-                                        <option value="2">Zona Oeste</option>
-                                        <option value="3">Zona Norte</option>
-                                    </select>
-									</div>
-								
-						</div>
-
-								<div class="form-group">
-								
-									<div class="input-group">
-									  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-									  <input type="text" class="form-control" name="passwordEmp" id="passwordEmp" placeholder="Contraseña" aria-describedby="basic-addon1">
-									</div>
-								
-						</div>
-
-
-								<div class="form-group">
-								
-									<div class="input-group">
-									  <span class="input-group-addon"><i class="glyphicon glyphicon-repeat"></i></span>
-									  <input type="text" class="form-control" name="confirmEmp" id="confirmEmp" placeholder="Confirme Contraseña" aria-describedby="basic-addon1">
-									</div>
-								
-						</div>
 						<div class="form-group ">
 
 						 <button type="submit" class="btn btn-success">Registrar</button>
 						</div>
-						</form:form>  -->
+						</form:form>
 
 						</div>
 

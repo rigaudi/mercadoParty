@@ -28,7 +28,7 @@
                                     <div class="input-group">
                                       <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
                                       
-                                      <input id="emailInput" placeholder="Direccion de email" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                      <input id="emailInput" placeholder="Direccion de email" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required>
                                     </div>
                                   </div>
                                   <div class="form-group">
