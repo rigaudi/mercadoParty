@@ -22,7 +22,7 @@ public class ControladorAgregarConsumidor {
 	@RequestMapping(path ="/agregarConsumidor", method = RequestMethod.POST)
 	public ModelAndView cargarUsuario(@ModelAttribute("usuario")Consumidor usuario) {
 		servicioconsumidor.guardarConsumidor(usuario);
-		return new ModelAndView("home");
+		return new ModelAndView("cargaProducto");
 		}
 }
 

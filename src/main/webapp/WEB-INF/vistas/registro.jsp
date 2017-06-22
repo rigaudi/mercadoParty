@@ -21,23 +21,24 @@
 				 <ul class="nav nav-tabs">
 
 				<li class="active" ><a data-toggle="tab" href="#menu1">Registrate</a></li>
-				    <li><a data-toggle="tab" href="#menu2">Registrate como Empresa</a></li>
 				    </ul>
 
 
 				<div class="col-sm-4 col-sm-offset-4">    
 
-					
 
-			
-					
 					  <div class="tab-content">
     					<div id="menu1" class="tab-pane fade in active">
     					
-     					 <h3>Comenzá ahora, miles de servicios te estan esperando!</h3>
+     					 <h3>Comenzá ahora, registrate y oferta tu servicio!</h3>
 
 						<form:form action="/mercadoParty/agregarConsumidor" method="POST" modelAttribute="usuario">
-		
+						<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre Empresa" aria-describedby="basic-addon1" required>
+						</div>
+						</div>			
 						<div class="form-group">
 								
 									<div class="input-group">
@@ -46,7 +47,41 @@
 									</div>
 								
 						</div>
+						<div class="form-group">
+								
+									<div class="input-group">
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+									  <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Teléfono" aria-describedby="basic-addon1" required>
+									</div>
+								
+						</div>
+						<div class="form-group">
+								
+									<div class="input-group">
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+									  <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Dirección" aria-describedby="basic-addon1" required>
+									</div>
+								
+						</div>
+													<div class="form-group">
+								
+								<div class="input-group">
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+									<select class="form-control" id="zona" name="zona" required>
+									   <option>¿En qué zona se encuentra?</option>
+                                        <option value="Capital Federal">Capital Federal</option>
+                                        <option value="Zona Sur">Zona Sur</option>
+                                        <option value="Zona Oeste">Zona Oeste</option>
+                                        <option value="Zona Norte">Zona Norte</option>
+                                    </select>
+								</div>
+									
+									<!-- <div class="input-group">
+									  <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
 
+									</div> -->
+								
+						</div>
 						<div class="form-group">
 								
 									<div class="input-group">
@@ -82,7 +117,7 @@
 						<div class="form-group ">
 						 <button type="submit" class="btn btn-success">Registrar</button>
 						</div>
-						</form:form> 
+						<!-- </form:form> 
 						</div>
 
 
@@ -94,10 +129,7 @@
 							<form:form action="/mercadoParty/agregarOferente" method="POST" modelAttribute="oferente">
 							    <div class="form-group">
 								
-									<div class="input-group">
-									  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									  <input type="text" class="form-control" name="nombreOferente" id="nombreOferente" placeholder="Nombre" aria-describedby="basic-addon1" required>
-									</div>
+
 								
 						</div>
 
@@ -111,44 +143,6 @@
 								
 						</div>
 
-		
-						<div class="form-group">
-								
-									<div class="input-group">
-									  <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-									  <input type="tel" class="form-control" name="telefonoOferente" id="telefonoOferente" placeholder="Teléfono" aria-describedby="basic-addon1" required>
-									</div>
-								
-						</div>
-
-						<div class="form-group">
-								
-									<div class="input-group">
-									  <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-									  <input type="text" class="form-control" name="direccionOferente" id="direccionOferente" placeholder="Dirección" aria-describedby="basic-addon1" required>
-									</div>
-								
-						</div>
-
-							<div class="form-group">
-								
-								<div class="input-group">
-									  <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-									  <input type="text" class="form-control" name="zonaOferente" id="zonaOferente" placeholder="Zona" aria-describedby="basic-addon1" required>
-								</div>
-									
-									<!-- <div class="input-group">
-									  <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-									    <select class="form-control" id="zonaOferente" name="zonaOferente" required>
-									   <option>¿En qué zona se encuentra?</option>
-                                        <option value="0">Capital Federal</option>
-                                        <option value="1">Zona Sur</option>
-                                        <option value="2">Zona Oeste</option>
-                                        <option value="3">Zona Norte</option>
-                                    </select>
-									</div> -->
-								
-						</div>
 
 								<div class="form-group">
 								
@@ -187,7 +181,7 @@
 
 						 <button type="submit" class="btn btn-success">Registrar</button>
 						</div>
-						</form:form>
+						</form:form> -->
 
 						</div>
 
