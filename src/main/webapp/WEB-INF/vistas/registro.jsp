@@ -117,7 +117,7 @@
 						<div class="form-group ">
 						 <button type="submit" class="btn btn-success">Registrar</button>
 						</div>
-						<!-- </form:form> 
+						</form:form> <!--
 						</div>
 
 
