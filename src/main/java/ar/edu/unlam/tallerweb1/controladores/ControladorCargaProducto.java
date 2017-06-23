@@ -1,7 +1,6 @@
 package ar.edu.unlam.tallerweb1.controladores;
 
 import javax.inject.Inject;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -17,42 +16,23 @@ import ar.edu.unlam.tallerweb1.servicios.ServicioPublicacion;
 public class ControladorCargaProducto {
 	
 	@Inject
-	private ServicioPublicacion servicioPublicacion;
+	private ServicioPublicacion serviciopublicacion;
 	
-	@RequestMapping(path = "/cargarProducto", method = RequestMethod.GET)
-	public ModelAndView irACargar() {
+	@RequestMapping(path ="/agregarPublicacion", method = RequestMethod.POST)
+	public ModelAndView cargarPublicacion(@ModelAttribute("publicacion")Publicacion publicacion) {
+		ModelMap modelo = new ModelMap();
+		Consumidor usuario = new Consumidor();
+		modelo.put("usuario", usuario);
+		serviciopublicacion.guardarPublicacion(publicacion);
+		return new ModelAndView("cargaProducto",modelo);
+		}
+	
+	@RequestMapping(path = "/agregarPubli", method = RequestMethod.GET)
+	public ModelAndView iraPubli() {
 		ModelMap modelo = new ModelMap();
 		Consumidor usuario = new Consumidor();
 		modelo.put("usuario", usuario);
 		return new ModelAndView("cargaProducto",modelo);
-	
 	}
-	
-	@RequestMapping(path ="/agregarPublicacion", method = RequestMethod.POST)
-	public ModelAndView cargarPublicacion(@ModelAttribute("publicacion")Publicacion publicacion) {
-		servicioPublicacion.guardarPublicacion(publicacion);
-		ModelMap modelo = new ModelMap();
-		Publicacion publicacion1 = new Publicacion();
-		modelo.put("publicacion", publicacion1);
-		System.out.println(publicacion1.getDescipcion());
-		return new ModelAndView("home",modelo);
-		}
-	
-
 }
-	
-	
-	
 
-
-//@RequestMapping(path = "/validar-login", method = RequestMethod.POST)
-//public ModelAndView validarLogin(@ModelAttribute("usuario") Oferente usuario) {
-//	ModelMap model = new ModelMap();
-//
-//	if (servicioLogin.consultarUsuario(usuario) != null) {
-//		return new ModelAndView("redirect:/home");
-//	} else {
-//		model.put("error", "Usuario o clave incorrecta");
-//	}
-//	return new ModelAndView("home", model);
-//}

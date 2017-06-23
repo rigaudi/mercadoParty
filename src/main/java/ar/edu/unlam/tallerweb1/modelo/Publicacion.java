@@ -126,11 +126,11 @@ public class Publicacion {
 
 
 
-	public String getDescipcion() {
+	public String getDescripcion() {
 		return descripcion;
 	}
 
-	public void setDescipcion(String descipcion) {
+	public void setDescripcion(String descipcion) {
 		this.descripcion = descipcion;
 	}
 	

@@ -8,7 +8,7 @@
 
 <body>
 	
-<%-- 	<jsp:include page="navegador.jsp" /> --%>
+	<jsp:include page="navegador.jsp" />
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
