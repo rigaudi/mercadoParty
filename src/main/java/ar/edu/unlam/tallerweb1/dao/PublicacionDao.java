@@ -7,4 +7,6 @@ public interface PublicacionDao {
 
 	void guardarPublicacion(Publicacion publicacion);
 
+	Publicacion consultarPublicacion(Publicacion publicacion);
+
 }

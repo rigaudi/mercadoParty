@@ -133,6 +133,7 @@ public class Publicacion {
 	public void setDescripcion(String descipcion) {
 		this.descripcion = descipcion;
 	}
+
 	
 
 	

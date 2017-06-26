@@ -23,6 +23,11 @@ public class ServicioPublicacionImpl implements ServicioPublicacion{
 		
 	}
 
+	@Override
+	public Publicacion consultarPublicacion(Publicacion publicacion) {
+		return servicioPublicacionDao.consultarPublicacion (publicacion);
+	}
+
 
 
 	

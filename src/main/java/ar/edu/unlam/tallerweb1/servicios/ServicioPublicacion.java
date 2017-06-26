@@ -7,4 +7,8 @@ public interface ServicioPublicacion {
 
 	void guardarPublicacion(Publicacion publicacion);
 
+	Publicacion consultarPublicacion(Publicacion publicacion);
+	
+	
+
 }
