@@ -1,6 +1,8 @@
 package ar.edu.unlam.tallerweb1.controladores;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -17,10 +19,11 @@ public class ControladorValidarLogin {
 	private ServicioLogin servicioLogin;
 
 @RequestMapping(path = "/validar-login", method = RequestMethod.POST)
-public ModelAndView validarLogin(@ModelAttribute("usuario")Consumidor usuario) {
+public ModelAndView validarLogin(@ModelAttribute("usuario")Consumidor usuario,  HttpServletRequest request) {
 	ModelMap model = new ModelMap();
 
 	if (servicioLogin.consultarUsuario(usuario) != null) {
+		request.getSession().setAttribute("session", usuario.getEmail());
 		return new ModelAndView("redirect:/listaProductos");
 	} else {
 		model.put("error", "Usuario o clave incorrecta");

@@ -33,7 +33,7 @@
                 <img class="group list-group-image" src="img/nadialogo.png" alt="" />
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
-                        Fotografias Nadia</h4>
+                        ${session}</h4>
                     <p class="group inner list-group-item-text">
                         Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                         sed diam nonummy nibh euismo.</p>

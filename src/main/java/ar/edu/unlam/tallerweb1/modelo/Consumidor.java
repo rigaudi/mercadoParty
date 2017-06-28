@@ -1,10 +1,14 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -36,16 +40,34 @@ public class Consumidor {
 	
 	@Column(name = "password", length = 20)
 	private String password;
-	
-	
+
+	@OneToMany(mappedBy="consumidor" )
+	private List<Publicacion> listaPublicacion;
+	   
 	// constuctores 
 	
 
 
 	public Consumidor() {
+		super();
+		 listaPublicacion = new ArrayList<Publicacion>();
 	}
+	
+	public List<Publicacion> getListaFacturas() {
+        return listaPublicacion;
+    }
+ 
+    public void addFactura(Publicacion f) {
+ 
+        listaPublicacion.add(f);
+    }
+ 
+    public void setListaFacturas(List<Publicacion> listaPublicacion) {
+        this.listaPublicacion = listaPublicacion;
+    }
 
 	public Consumidor(String nombreConsumidor, String emailConsumidor, Long telefonoConsumidor, String direccionConsumidor, String zonaConsumidor, String passwordConsumidor) {
+		super();
 		this.nombre = nombreConsumidor;
 		this.email = emailConsumidor;
 		this.telefono = telefonoConsumidor;
