@@ -10,7 +10,7 @@ import ar.edu.unlam.tallerweb1.modelo.Consumidor;
 @Service("servicioLogin")
 @Transactional
 public class ServicioLoginImpl implements ServicioLogin {
-	
+
 	@Inject
 	private UsuarioDao servicioLoginDao;
 
