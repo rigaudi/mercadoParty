@@ -13,7 +13,7 @@
 				<prop key="hibernate.validator.apply_to_ddl">false</prop>
 				<prop key="hibernate.validator.autoregister_listeners">false</prop>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
-				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.show_sql">true</prop>
 				<prop key="hibernate.format_sql">false</prop>
 				<prop key="hibernate.hbm2ddl.auto">update</prop>
 			</props>
@@ -30,7 +30,7 @@
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/mercadoParty" />
 		<property name="username" value="root" />
-		<property name="password" value="verdes" />
+		<property name="password" value="9nueve" />
 	</bean>
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
