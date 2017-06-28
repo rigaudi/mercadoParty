@@ -33,9 +33,10 @@
                 <img class="group list-group-image" src="img/nadialogo.png" alt="" />
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
-                      ${titulo}</h4>
+                      ${session}</h4>
                     <p class="group inner list-group-item-text">
-                        ${descripcion}</p>
+                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        sed diam nonummy nibh euismo.</p>
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <p class="lead">

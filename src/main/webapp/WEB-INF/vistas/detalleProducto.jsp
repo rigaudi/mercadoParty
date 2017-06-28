@@ -8,7 +8,7 @@
 
 <body>
 
-<jsp:include page="navegador.jsp" />
+<%-- <jsp:include page="navegador.jsp" /> --%>
 
 <div class="col-sm-12 col-md-12 col-lg-12">
     		<!-- product -->
@@ -44,12 +44,12 @@
 						<div class="col-md-7 col-sm-12 col-xs-12">
 					
 						<h2 class="name">
-							Fotografias Nadia
+							${titulo}
 						<br>							
-							<small>Zona Oeste</small>
+							<small>${session}</small>
 						</h2>
 						<hr>
-						<h3 class="price-container">Blas Parera 2260</h3>
+						<h3 class="price-container">direccion:${direccion}</h3>
 						<div class="certified">
 							<ul>
 								<li><a href="javascript:void(0);">Telefono<span>15-4041-5647</span></a></li>
@@ -65,10 +65,8 @@
 							<div id="myTabContent" class="tab-content">
 								<div class="tab-pane fade active in" id="more-information">
 									<br>
-									<strong>Description Title</strong>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id bibendum mauris. Nunc dictum felis vel scelerisque laoreet. Donec nisi purus, fermentum a sapien ac, rutrum lacinia ante. Nam convallis risus at metus efficitur, id pulvinar eros pulvinar. Pellentesque nec sapien a ipsum tristique pretium. Nullam orci ex, varius at convallis id, euismod et eros. Donec cursus, magna quis feugiat hendrerit, turpis tortor laoreet elit, imperdiet aliquam ante est eget est. Duis accumsan felis id eros facilisis, eu varius mauris elementum. Etiam aliquam facilisis justo vitae cursus.
-									Suspendisse aliquam hendrerit nunc, vitae viverra lacus volutpat at. Nunc at risus varius, lacinia tortor pretium, ultrices risus. Curabitur eget commodo arcu. Sed consectetur mattis vehicula. Nunc non fringilla ligula. Curabitur tincidunt porttitor purus auctor laoreet. Nunc quis nisi nulla. Fusce aliquam ante at malesuada pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce fermentum elit in malesuada feugiat.</p>
-								</div>
+									<strong>Descripcion:</strong>
+									<p>${descripcion}</div>
 								<div class="tab-pane fade" id="specifications">
 								<div id="googleMap" style="width:100%;height:300px;"></div>
 

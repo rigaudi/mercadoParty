@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ar.edu.unlam.tallerweb1.dao.ServicioConsumidorDao;
 import ar.edu.unlam.tallerweb1.modelo.Consumidor;
 
-@Service ("servicioEstudiante")
+@Service ("servicioConsumidor")
 @Transactional
 public class ServicioConsumidorImpl implements ServicioConsumidor{
 

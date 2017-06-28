@@ -2,12 +2,10 @@
 package ar.edu.unlam.tallerweb1.dao;
 
 import javax.inject.Inject;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Service;
-
 import ar.edu.unlam.tallerweb1.modelo.Publicacion;
 
 
@@ -16,22 +14,23 @@ import ar.edu.unlam.tallerweb1.modelo.Publicacion;
 public class PublicacionDaoImpl implements PublicacionDao {
 
 	@Inject
-	private SessionFactory session;
+	private SessionFactory sessionFactory;
 
 
 	@Override
 	public void guardarPublicacion(Publicacion publicacion) {
-		session.getCurrentSession().save(publicacion);
+		sessionFactory.getCurrentSession().save(publicacion);
 		
 	}
 
 
 	@Override
 	public Publicacion consultarPublicacion(Publicacion publicacion) {
-		final Session session = this.session.getCurrentSession();
-		
+		final Session session = sessionFactory.openSession();
 		return (Publicacion) session.createCriteria(Publicacion.class)
-				.add(Restrictions.eq("id",16)).uniqueResult();
+				.add(Restrictions.eq("titulo", publicacion.getTitulo()))
+				.add(Restrictions.eq("descripcion", publicacion.getDescripcion()))
+				.uniqueResult();
 	}
 
 
