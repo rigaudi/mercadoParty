@@ -37,11 +37,18 @@ public class ControladorCargaProducto {
 		}
 	
 	@RequestMapping(path = "/agregarPubli", method = RequestMethod.GET)
-	public ModelAndView iraPubli() {
+	public ModelAndView iraPubli(HttpServletRequest request) {
+		
+		if(request.getSession().getAttribute("session") != null){
+			ModelMap modelo = new ModelMap();
+			Consumidor usuario = new Consumidor();
+			modelo.put("usuario", usuario);
+			return new ModelAndView("cargaProducto",modelo);
+		}
 		ModelMap modelo = new ModelMap();
 		Consumidor usuario = new Consumidor();
 		modelo.put("usuario", usuario);
-		return new ModelAndView("cargaProducto",modelo);
+		return new ModelAndView("home",modelo);
 	}
 }
 

@@ -32,4 +32,11 @@ public ModelAndView validarLogin(@ModelAttribute("usuario")Consumidor usuario,  
 	return new ModelAndView("home", model);
 }
 
+@RequestMapping(path = "/logout")
+public ModelAndView logout(HttpServletRequest request) {
+		request.getSession().invalidate();
+	return new ModelAndView("redirect:/");
+}
+
+
 }

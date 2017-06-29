@@ -76,5 +76,8 @@
       </ul>
         </li>
       </ul>
+       <div class="bottom text-center">
+              <a href="/mercadoParty/logout"><b>Logout</b></a>
+       </div>
 		</div>
 	</nav>
