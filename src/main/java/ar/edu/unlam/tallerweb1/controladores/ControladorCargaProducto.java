@@ -31,6 +31,7 @@ public class ControladorCargaProducto {
  		modelo1.put("titulo", publicacion.getTitulo());
  		modelo1.put("descripcion", publicacion.getDescripcion());
  		modelo1.put("imagen1", publicacion.getImagen1());
+ 		modelo1.put("idPublicacion",request.getSession().getAttribute("session"));
   		serviciopublicacion.guardarPublicacion(publicacion);
  		request.getSession().setAttribute("session", usuario);
  		return new ModelAndView("detalleProducto",modelo1);

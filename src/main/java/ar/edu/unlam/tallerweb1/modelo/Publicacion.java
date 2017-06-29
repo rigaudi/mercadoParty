@@ -40,7 +40,7 @@ public class Publicacion {
 	private String descripcion;
 	
 	@ManyToOne
-	@JoinColumn(name = "idPublicacion", nullable = true)
+	@JoinColumn(name = "idConsumidor", nullable = true)
 	private Consumidor consumidor;
 	
 	// constuctores 
