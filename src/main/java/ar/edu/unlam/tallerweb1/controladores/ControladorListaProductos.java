@@ -37,8 +37,10 @@ public class ControladorListaProductos {
 			
 			modelo.put("titulo",titulo);
 			modelo.put("descripcion",descripcion);
-			System.out.println(publicacion.getDescripcion());
-			System.out.println(publicacion.getTitulo());
+//			System.out.println(request.getSession().getAttribute("session"));
+//			System.out.println(request.getSession().getAttribute("IdSesion"));
+//			System.out.println(publicacion.getDescripcion());
+//			System.out.println(publicacion.getTitulo());
 //			Publicacion publicacionImportada = servicioPublicacion.consultarPublicacion (publicacion);
 //			modelo.put("titulo",publicacionImportada.getTitulo());
 //			System.out.println(publicacionImportada.getDescripcion());

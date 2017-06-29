@@ -22,6 +22,14 @@ public class ServicioConsumidorImpl implements ServicioConsumidor{
 		
 	}
 
+	@Override
+	public Consumidor consultarUsuarioPorMail(String email) {
+		
+		return servicioConsumidorDao.consultarUsuarioPorMail(email);
+	}
+	
+	
+
 
 
 	

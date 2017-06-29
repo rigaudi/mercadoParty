@@ -6,5 +6,8 @@ public interface ServicioConsumidor {
 
 
 	void guardarConsumidor(Consumidor consumidor);
+	
+	Consumidor consultarUsuarioPorMail (String email);
+
 
 }

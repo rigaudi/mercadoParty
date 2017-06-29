@@ -26,7 +26,7 @@ public class Consumidor {
 	@Column(name = "nombre", length = 50)
 	private String nombre;	
 	
-	@Column(name = "email", length = 100)
+	//@Column(name = "email", length = 100)
 	private String email;
 	
 	@Column(name = "telefono", length = 50)

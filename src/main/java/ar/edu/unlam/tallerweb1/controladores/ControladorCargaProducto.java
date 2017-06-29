@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.unlam.tallerweb1.modelo.Consumidor;
 import ar.edu.unlam.tallerweb1.modelo.Publicacion;
+import ar.edu.unlam.tallerweb1.servicios.ServicioConsumidor;
 import ar.edu.unlam.tallerweb1.servicios.ServicioPublicacion;
 
 @Controller
@@ -19,37 +20,40 @@ public class ControladorCargaProducto {
 	
 	@Inject
 	private ServicioPublicacion serviciopublicacion;
+	@Inject
+	private ServicioConsumidor servicioconsumidor;
 	
+
 	@RequestMapping(path ="/agregarPublicacion", method = RequestMethod.POST)
 	public ModelAndView cargarPublicacion(@ModelAttribute("publicacion")Publicacion publicacion, HttpServletRequest request){
- 		ModelMap modelo = new ModelMap();
  		ModelMap modelo1 = new ModelMap();
-  		Consumidor usuario = new Consumidor();
-  		modelo.put("usuario", usuario);
-  		modelo.put("direccion", usuario.getDireccion());
  		modelo1.put("id", publicacion.getId());
  		modelo1.put("titulo", publicacion.getTitulo());
  		modelo1.put("descripcion", publicacion.getDescripcion());
  		modelo1.put("imagen1", publicacion.getImagen1());
- 		modelo1.put("idPublicacion",request.getSession().getAttribute("session"));
+ 		String email = (String) request.getSession().getAttribute("session");
+ 		System.out.println(email);
+ 		Consumidor miConsumidor = servicioconsumidor.consultarUsuarioPorMail(email);
+ 		System.out.println("el id de usuario es"+ miConsumidor.getId());
+		modelo1.put("idConsumidor",miConsumidor.getId());
   		serviciopublicacion.guardarPublicacion(publicacion);
- 		request.getSession().setAttribute("session", usuario);
  		return new ModelAndView("detalleProducto",modelo1);
 		}
 	
-	@RequestMapping(path = "/agregarPubli", method = RequestMethod.GET)
-	public ModelAndView iraPubli(HttpServletRequest request) {
-		
-		if(request.getSession().getAttribute("session") != null){
-			ModelMap modelo = new ModelMap();
-			Consumidor usuario = new Consumidor();
-			modelo.put("usuario", usuario);
-			return new ModelAndView("cargaProducto",modelo);
-		}
-		ModelMap modelo = new ModelMap();
-		Consumidor usuario = new Consumidor();
-		modelo.put("usuario", usuario);
-		return new ModelAndView("home",modelo);
-	}
+//	@RequestMapping(path = "/agregarPubli", method = RequestMethod.GET)
+//	public ModelAndView iraPubli(HttpServletRequest request) {
+//		
+//		if(request.getSession().getAttribute("session") != null){
+//			
+//			ModelMap modelo = new ModelMap();
+//			Consumidor usuario = new Consumidor();
+//			modelo.put("usuario", usuario);
+//			return new ModelAndView("cargaProducto",modelo);
+//		}
+//		ModelMap modelo = new ModelMap();
+//		Consumidor usuario = new Consumidor();
+//		modelo.put("usuario", usuario);
+//		return new ModelAndView("home",modelo);
+//	}
 }
 
