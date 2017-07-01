@@ -3,6 +3,8 @@ package ar.edu.unlam.tallerweb1.controladores;
 
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,9 +22,10 @@ public class ControladorAgregarConsumidor {
 	private ServicioConsumidor servicioconsumidor;
 	
 	@RequestMapping(path ="/agregarConsumidor", method = RequestMethod.POST)
-	public ModelAndView cargarUsuario(@ModelAttribute("usuario")Consumidor usuario) {
+	public ModelAndView cargarUsuario(@ModelAttribute("usuario")Consumidor usuario, HttpServletRequest request) {
 		servicioconsumidor.guardarConsumidor(usuario);
-		return new ModelAndView("cargaProducto");
+		request.getSession().setAttribute("session", usuario.getEmail());
+		return new ModelAndView("home");
 		}
 }
 

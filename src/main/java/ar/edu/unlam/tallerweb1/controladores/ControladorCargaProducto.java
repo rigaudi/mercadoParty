@@ -24,36 +24,23 @@ public class ControladorCargaProducto {
 	private ServicioConsumidor servicioconsumidor;
 	
 
-	@RequestMapping(path ="/agregarPublicacion", method = RequestMethod.POST)
-	public ModelAndView cargarPublicacion(@ModelAttribute("publicacion")Publicacion publicacion, HttpServletRequest request){
+	@RequestMapping(path ="/cargarProducto", method = RequestMethod.POST)
+	public ModelAndView cargarPublicacion(@ModelAttribute("publicacion")Publicacion publicacion,@ModelAttribute("usuario") Consumidor usuario, HttpServletRequest request){
  		ModelMap modelo1 = new ModelMap();
  		modelo1.put("id", publicacion.getId());
  		modelo1.put("titulo", publicacion.getTitulo());
  		modelo1.put("descripcion", publicacion.getDescripcion());
  		modelo1.put("imagen1", publicacion.getImagen1());
+ 		modelo1.put("imagen2", publicacion.getImagen2());
+ 		modelo1.put("imagen3", publicacion.getImagen3());
  		String email = (String) request.getSession().getAttribute("session");
- 		System.out.println(email);
  		Consumidor miConsumidor = servicioconsumidor.consultarUsuarioPorMail(email);
  		System.out.println("el id de usuario es"+ miConsumidor.getId());
-		modelo1.put("idConsumidor",miConsumidor.getId());
+		modelo1.put("idConsumidor",(Long)miConsumidor.getId());
   		serviciopublicacion.guardarPublicacion(publicacion);
  		return new ModelAndView("detalleProducto",modelo1);
 		}
 	
-//	@RequestMapping(path = "/agregarPubli", method = RequestMethod.GET)
-//	public ModelAndView iraPubli(HttpServletRequest request) {
-//		
-//		if(request.getSession().getAttribute("session") != null){
-//			
-//			ModelMap modelo = new ModelMap();
-//			Consumidor usuario = new Consumidor();
-//			modelo.put("usuario", usuario);
-//			return new ModelAndView("cargaProducto",modelo);
-//		}
-//		ModelMap modelo = new ModelMap();
-//		Consumidor usuario = new Consumidor();
-//		modelo.put("usuario", usuario);
-//		return new ModelAndView("home",modelo);
-//	}
+
 }
 

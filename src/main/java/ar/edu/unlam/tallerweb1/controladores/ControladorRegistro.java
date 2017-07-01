@@ -16,4 +16,7 @@ public class ControladorRegistro {
 		modelo.put("usuario", usuario);
 		return new ModelAndView("registro",modelo);
 	}
+
+
+
 }

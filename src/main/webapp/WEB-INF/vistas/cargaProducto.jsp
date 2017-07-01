@@ -17,9 +17,9 @@
 			<div class="container">
 			<div class="col-md-6 col-md-offset-3">
 			
-			<h1>¡Describe tu servicio!</h1>
+			<h1>Bienvenido <small>${session}</small> pelotudo</h1>
 		
-		<form:form action="/mercadoParty/agregarPublicacion"  method="POST" modelAttribute="publicacion">
+		<form:form action="/mercadoParty/cargarProducto"  method="POST" modelAttribute="publicacion">
 			<div class="form-group"> 
 				<label for="sel1">Elige qué quieres publicar:</label>
 					<select class="form-control" name="tipoServicio" id="tipoServicio">
@@ -60,6 +60,9 @@
 				  <label for="comment">Descripcion:</label>
 				  <textarea class="form-control" rows="5" name="descripcion" id="descripcion"></textarea>
 				</div>
+			
+				
+				
 
 				<div class="form-group">
 					<button class="btn btn-primary" type="submit">Guardar</button>
