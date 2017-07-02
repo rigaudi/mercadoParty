@@ -69,7 +69,7 @@
 									<p>${descripcion}</div>
 								<div class="tab-pane fade" id="specifications">
 								
-								<form:form action="cargarMensaje" method="POST" modelAttribute="mensaje">
+								<form:form action="/mercadoParty/cargarMensaje" method="POST" modelAttribute="mensaje">
 							  <textarea class="form-control" rows="4" id="texto" name="texto"></textarea>
 								  <div class="col-sm-12 col-md-6 col-lg-6"> <br>
 										<button class="btn btn-primary" type="submit">Preguntar</button>

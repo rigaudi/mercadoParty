@@ -9,4 +9,7 @@ public interface PublicacionDao {
 
 	Publicacion consultarPublicacion(Publicacion publicacion);
 
+
+	Publicacion consultarPublicacionPorId(Long id);
+
 }

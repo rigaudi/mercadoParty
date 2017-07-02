@@ -29,7 +29,7 @@ public class ServicioPublicacionImpl implements ServicioPublicacion{
 	@Override
 	public Publicacion consultarPublicacionPorId(Long id) {
 		// TODO Auto-generated method stub
-		return null;
+		return servicioPublicacionDao.consultarPublicacionPorId(id);
 	}
 
 
