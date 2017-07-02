@@ -26,6 +26,12 @@ public class ServicioPublicacionImpl implements ServicioPublicacion{
 		return servicioPublicacionDao.consultarPublicacion (publicacion);
 	}
 
+	@Override
+	public Publicacion consultarPublicacionPorId(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 
 	

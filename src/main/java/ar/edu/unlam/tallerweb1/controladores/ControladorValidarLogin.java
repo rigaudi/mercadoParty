@@ -24,7 +24,7 @@ public ModelAndView validarLogin(@ModelAttribute("usuario")Consumidor usuario,  
 
 	if (servicioLogin.consultarUsuario(usuario) != null) {
 		request.getSession().setAttribute("session", usuario.getEmail());
-		return new ModelAndView("redirect:/home");
+		return new ModelAndView("redirect:/panelUsuario");
 	} else {
 		model.put("error", "Usuario o clave incorrecta");
 		System.out.println("Usuario o clave incorrecta\n");

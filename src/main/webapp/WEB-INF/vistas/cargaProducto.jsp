@@ -17,7 +17,7 @@
 			<div class="container">
 			<div class="col-md-6 col-md-offset-3">
 			
-			<h1>Bienvenido <small>${session}</small> pelotudo</h1>
+			<h1>Bienvenido <small>${session}</small></h1>
 		
 		<form:form action="/mercadoParty/cargarProducto"  method="POST" modelAttribute="publicacion">
 			<div class="form-group"> 

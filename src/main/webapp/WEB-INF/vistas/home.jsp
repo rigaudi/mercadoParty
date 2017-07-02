@@ -52,9 +52,6 @@
     </a>
 </div>
 
-<div class="item">
-<a href="/mercadoParty/agregarPublicacion" class="btn btn-info" role="button">Link Button</a>
-</div>
 
 
 <jsp:include page="footer.jsp" />

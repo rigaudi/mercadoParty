@@ -60,7 +60,7 @@
 						<div class="description description-tabs">
 							<ul id="myTab" class="nav nav-pills">
 								<li class="active"><a href="#more-information" data-toggle="tab" class="no-margin">Descripcion</a></li>
-								<li class=""><a href="#specifications" data-toggle="tab">Especificaciones</a></li>
+								<li class=""><a href="#specifications" data-toggle="tab">Mensajes</a></li>
 							</ul>
 							<div id="myTabContent" class="tab-content">
 								<div class="tab-pane fade active in" id="more-information">
@@ -68,26 +68,16 @@
 									<strong>Descripcion:</strong>
 									<p>${descripcion}</div>
 								<div class="tab-pane fade" id="specifications">
-								<div id="googleMap" style="width:100%;height:300px;"></div>
-
-								<script>
-								function myMap() {
-								var mapProp= {
-								    center:new google.maps.LatLng(51.508742,-0.120850),
-								    zoom:5,
-								};
-								var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-								}
-								</script>
-
-								<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfBI8EI81Fw61zGM_AnySP-UHglgCWs9w&callback=myMap"></script>
+								
+								<form:form action="cargarMensaje" method="POST" modelAttribute="mensaje">
+							  <textarea class="form-control" rows="4" id="texto" name="texto"></textarea>
+								  <div class="col-sm-12 col-md-6 col-lg-6"> <br>
+										<button class="btn btn-primary" type="submit">Preguntar</button>
+								  </div>
+								  </form:form>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-sm-12 col-md-6 col-lg-6">
-									<a href="javascript:void(0);" class="btn btn-success btn-lg">Contactar</a>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</div>

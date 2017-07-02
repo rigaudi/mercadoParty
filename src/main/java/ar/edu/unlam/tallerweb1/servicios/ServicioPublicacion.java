@@ -6,5 +6,6 @@ public interface ServicioPublicacion {
 
 	void guardarPublicacion(Publicacion publicacion);
 	Publicacion consultarPublicacion(Publicacion publicacion);
+	Publicacion consultarPublicacionPorId (Long id);
 
 }

@@ -43,28 +43,13 @@ public class Consumidor {
 
 	@OneToMany(mappedBy="consumidor" )
 	private List<Publicacion> listaPublicacion;
-	   
-	// constuctores 
-	
 
 
 	public Consumidor() {
 		super();
 		 listaPublicacion = new ArrayList<Publicacion>();
 	}
-	
-	public List<Publicacion> getListaFacturas() {
-        return listaPublicacion;
-    }
  
-    public void addFactura(Publicacion f) {
- 
-        listaPublicacion.add(f);
-    }
- 
-    public void setListaFacturas(List<Publicacion> listaPublicacion) {
-        this.listaPublicacion = listaPublicacion;
-    }
 
 	public Consumidor(String nombreConsumidor, String emailConsumidor, Long telefonoConsumidor, String direccionConsumidor, String zonaConsumidor, String passwordConsumidor) {
 		super();
