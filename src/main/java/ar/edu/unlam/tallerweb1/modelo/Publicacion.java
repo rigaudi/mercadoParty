@@ -32,13 +32,13 @@ public class Publicacion {
 	private String titulo;
 
 	@Column(name = "imagen1")
-	private byte[] imagen1;
+	private String imagen1;
 
 	@Column(name = "imagen2")
-	private byte[] imagen2;
+	private String imagen2;
 
 	@Column(name = "imagen3")
-	private byte[] imagen3;
+	private String imagen3;
 	
 	@Column(name = "descripcion", length = 1000)
 	private String descripcion;
@@ -58,7 +58,7 @@ public class Publicacion {
 	listaMensaje = new ArrayList<Mensaje>();
 	}
 
-	public Publicacion(String tiposervicio, String titulo, byte[] imagen1,byte[] imagen2, byte[] imagen3, String descripcion, Consumidor consumidor) {
+	public Publicacion(String tiposervicio, String titulo, String imagen1, String imagen2, String imagen3, String descripcion, Consumidor consumidor) {
 		super();
 		this.tipoServicio=tiposervicio;
 		this.titulo=titulo;
@@ -99,29 +99,29 @@ public class Publicacion {
 	}
 
 
-	public byte[] getImagen1() {
+	public String getImagen1() {
 		return imagen1;
 	}
 
-	public void setImagen1(byte[] imagen1) {
+	public void setImagen1(String imagen1) {
 		this.imagen1 = imagen1;
 	}
 
 
-	public byte[] getImagen2() {
+	public String getImagen2() {
 		return imagen2;
 	}
 
-	public void setImagen2(byte[] imagen2) {
+	public void setImagen2(String imagen2) {
 		this.imagen2 = imagen2;
 	}
 
 
-	public byte[] getImagen3() {
+	public String getImagen3() {
 		return imagen3;
 	}
 
-	public void setImagen3(byte[] imagen3) {
+	public void setImagen3(String imagen3) {
 		this.imagen3 = imagen3;
 	}
 

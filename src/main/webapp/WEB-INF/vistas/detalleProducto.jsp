@@ -25,15 +25,15 @@
 								<div class="carousel-inner">
 									<!-- Slide 1 -->
 									<div class="item active">
-										<img src="img/nadialogo.png" alt="">
+										<img src="img/${imagen1}" class="img-thumbnail" alt="imagen1" width="306" height="295">
 									</div>
 									<!-- Slide 2 -->
 									<div class="item">
-										<img src="img/fotprod1.png" alt="">
+										<img src="img/${imagen2}" class="img-thumbnail" alt="imagen2" width="306" height="295">
 									</div>
 									<!-- Slide 3 -->
 									<div class="item">
-										<img src="img/fotprod2.png" alt="">
+										<img src="img/${imagen3}" class="img-thumbnail" alt="imagen3" width="306" height="295">
 									</div>
 								</div>
 								<a class="left carousel-control" href="#myCarousel-2" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
@@ -46,7 +46,7 @@
 						<h2 class="name">
 							${titulo}
 						<br>							
-							<small>${session}</small>
+							<small>${tipoServicio}</small>
 						</h2>
 						<hr>
 						<h3 class="price-container">direccion:${direccion}</h3>

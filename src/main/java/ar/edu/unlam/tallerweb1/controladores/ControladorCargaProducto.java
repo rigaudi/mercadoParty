@@ -33,6 +33,7 @@ public class ControladorCargaProducto {
  		modelo1.put("imagen1", publicacion.getImagen1());
  		modelo1.put("imagen2", publicacion.getImagen2());
  		modelo1.put("imagen3", publicacion.getImagen3());
+ 		System.out.println(publicacion.getImagen1());
  		String email = (String) request.getSession().getAttribute("session");
  		Consumidor miConsumidor = servicioconsumidor.consultarUsuarioPorMail(email);
  		publicacion.setConsumidor(miConsumidor);

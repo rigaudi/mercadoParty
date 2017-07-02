@@ -56,7 +56,7 @@
                     <div class="form-group">
                        <label class="sr-only" for="exampleInputPassword2">Contraseña</label>
                        <form:input path="password" type="password" class="form-control" id="exampleInputPassword2" placeholder="Contraseña" />
-                                             <div class="help-block text-right"><a href="/mercadoParty/olvidopass">Olvido su contraseña ?</a></div>
+                                             <div class="help-block text-right"><a href="/mercadoParty/registro">Registrarse</a></div>
                     </div>
                     <div class="form-group">
                        <button type="submit" value="login" class="btn btn-primary btn-block">Inicia Sesion</button>
@@ -69,15 +69,12 @@
                  </form:form>
               </div>
               <div class="bottom text-center">
-                Eres nuevo ? <a href="/mercadoParty/registro"><b>Unete</b></a>
+               <a href="/mercadoParty/logout"><b>Cerrar sesión</b></a>
               </div>
            </div>
         </li>
       </ul>
         </li>
       </ul>
-       <div class="bottom text-center">
-              <a href="/mercadoParty/logout"><b>Logout</b></a>
-       </div>
 		</div>
 	</nav>
