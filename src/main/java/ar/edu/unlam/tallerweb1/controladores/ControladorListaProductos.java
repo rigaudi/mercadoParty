@@ -10,12 +10,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import ar.edu.unlam.tallerweb1.modelo.Consumidor;
 import ar.edu.unlam.tallerweb1.modelo.Publicacion;
+import ar.edu.unlam.tallerweb1.servicios.ServicioConsumidor;
 import ar.edu.unlam.tallerweb1.servicios.ServicioPublicacion;
 
 @Controller
 public class ControladorListaProductos {
 	
 	@Inject
+	private ServicioConsumidor servicioConsumidor;
 	private ServicioPublicacion servicioPublicacion;
 	
 
@@ -26,24 +28,16 @@ public class ControladorListaProductos {
 			ModelMap modelo = new ModelMap();
 			Consumidor usuario = new Consumidor();
 			modelo.put("usuario", usuario);
-			
-			Publicacion publicacion = new Publicacion();
-			publicacion.setDescripcion("asdadsadad");
-			publicacion.setTitulo("eeeeeeeeerere");
-			String descripcion = publicacion.getDescripcion();
-			String titulo = publicacion.getTitulo();
-			
-			servicioPublicacion.guardarPublicacion(publicacion);
-			
+	 		String email = (String) request.getSession().getAttribute("session");
+			Consumidor usuario1 = servicioConsumidor.consultarUsuarioPorMail(email);
+			Long idConsumidor = usuario1.getId();
+			System.out.println("el id de usuario es"+ idConsumidor);
+	 		String descripcion = usuario1.getDireccion();
+			String titulo = usuario1.getZona();	
+			modelo.put("usuario", usuario1);
 			modelo.put("titulo",titulo);
 			modelo.put("descripcion",descripcion);
-//			System.out.println(request.getSession().getAttribute("session"));
-//			System.out.println(request.getSession().getAttribute("IdSesion"));
-//			System.out.println(publicacion.getDescripcion());
-//			System.out.println(publicacion.getTitulo());
-//			Publicacion publicacionImportada = servicioPublicacion.consultarPublicacion (publicacion);
-//			modelo.put("titulo",publicacionImportada.getTitulo());
-//			System.out.println(publicacionImportada.getDescripcion());
+	 		
 			
 			return new ModelAndView("listaProductos",modelo);
 		}
