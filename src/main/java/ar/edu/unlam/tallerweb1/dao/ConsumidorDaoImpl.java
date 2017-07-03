@@ -15,7 +15,7 @@ import ar.edu.unlam.tallerweb1.modelo.Consumidor;
 @Service ("servicioConsumidorDao")
 @Transactional
 
-public class ServicioConsumidorDaoImpl implements ServicioConsumidorDao {
+public class ConsumidorDaoImpl implements ConsumidorDao {
 
 	@Inject
 	private SessionFactory session;

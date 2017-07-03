@@ -5,7 +5,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import ar.edu.unlam.tallerweb1.dao.ServicioConsumidorDao;
+import ar.edu.unlam.tallerweb1.dao.ConsumidorDao;
 import ar.edu.unlam.tallerweb1.modelo.Consumidor;
 
 @Service ("servicioConsumidor")
@@ -13,7 +13,7 @@ import ar.edu.unlam.tallerweb1.modelo.Consumidor;
 public class ServicioConsumidorImpl implements ServicioConsumidor{
 
 	@Inject
-	private ServicioConsumidorDao servicioConsumidorDao;
+	private ConsumidorDao servicioConsumidorDao;
 
 	@Override
 	public void guardarConsumidor(Consumidor consumidor) {

@@ -68,6 +68,12 @@ public class Publicacion {
 		this.descripcion=descripcion;
 		this.consumidor=consumidor;
 	}
+	
+	public Publicacion(String tiposervicio){
+		super();
+		this.tipoServicio= tiposervicio;
+
+	}
 
 	
 	// Getters y setters
