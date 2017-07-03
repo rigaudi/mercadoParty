@@ -12,7 +12,13 @@
 
 <body>
 
-<jsp:include page="navegador.jsp" />
+<c:if test="${session == null}" > 	
+	<jsp:include page="navegador.jsp" />
+</c:if>
+
+<c:if test="${session != null}" > 	
+	<jsp:include page="navegadorlogueado.jsp" />
+</c:if>
 
 			<div class="container">
 			<div class="col-md-6 col-md-offset-3">
@@ -42,15 +48,15 @@
 
 
 				<div class="form-group">
-                    <input name="imagen1" id="imagen1" type="file" class="file" multiple=true data-preview-file-type="any">
+                    <input name="imagen1" id="imagen1" type="file" class="file" multiple=true data-preview-file-type="any" required>
                 </div>
                 
                 <div class="form-group">
-                    <input name="imagen2" id="imagen2" type="file" class="file" multiple=true data-preview-file-type="any">
+                    <input name="imagen2" id="imagen2" type="file" class="file" multiple=true data-preview-file-type="any" required>
                 </div>
                 
                 <div class="form-group">
-                    <input name="imagen3" id="imagen3" type="file" class="file" multiple=true data-preview-file-type="any">
+                    <input name="imagen3" id="imagen3" type="file" class="file" multiple=true data-preview-file-type="any" required>
                 </div>
 
 

@@ -8,8 +8,13 @@
 
 <body>
 	
-<jsp:include page="navegador.jsp" />
+<c:if test="${session == null}" > 	
+	<jsp:include page="navegador.jsp" />
+</c:if>
 
+<c:if test="${session != null}" > 	
+	<jsp:include page="navegadorlogueado.jsp" />
+</c:if>
 <div class="container">
 <script type="text/javascript">
 	$(document).ready(function() {

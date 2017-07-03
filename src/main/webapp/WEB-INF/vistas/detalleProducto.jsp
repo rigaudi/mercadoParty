@@ -7,9 +7,13 @@
 	</head>
 
 <body>
+<c:if test="${session == null}" > 	
+	<jsp:include page="navegador.jsp" />
+</c:if>
 
-<jsp:include page="navegador.jsp" />
-
+<c:if test="${session != null}" > 	
+	<jsp:include page="navegadorlogueado.jsp" />
+</c:if>
 <div class="col-sm-12 col-md-12 col-lg-12">
     		<!-- product -->
 			<div class="product-content product-wrap clearfix product-deatil">

@@ -3,13 +3,21 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<jsp:include page="etiquetasHead.jsp" />
+
+
+   <jsp:include page="etiquetasHead.jsp" />
+
+
 	</head>
 
 <body>
-	
+<c:if test="${session == null}" > 	
 	<jsp:include page="navegador.jsp" />
+</c:if>
 
+<c:if test="${session != null}" > 	
+	<jsp:include page="navegadorlogueado.jsp" />
+</c:if>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
     <!-- Imagenes del slider -->

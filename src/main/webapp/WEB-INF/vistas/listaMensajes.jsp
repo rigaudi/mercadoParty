@@ -8,7 +8,13 @@
 
 <body>
 	
-<jsp:include page="navegador.jsp" />
+<c:if test="${session == null}" > 	
+	<jsp:include page="navegador.jsp" />
+</c:if>
+
+<c:if test="${session != null}" > 	
+	<jsp:include page="navegadorlogueado.jsp" />
+</c:if>
 
 <div class="container">
 <script type="text/javascript">
@@ -39,7 +45,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <p class="lead">
-                                $1.000</p>
+                                A convenir</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <a class="btn btn-success" href="/mercadoParty/detalleProducto">Contactar</a>

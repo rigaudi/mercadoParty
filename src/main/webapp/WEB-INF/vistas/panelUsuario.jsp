@@ -8,7 +8,13 @@
 
 <body>
 	
+<c:if test="${session == null}" > 	
 	<jsp:include page="navegador.jsp" />
+</c:if>
+
+<c:if test="${session != null}" > 	
+	<jsp:include page="navegadorlogueado.jsp" />
+</c:if>
 
 <div class="container">
 <div class="col-md-6 col-md-offset-3">
