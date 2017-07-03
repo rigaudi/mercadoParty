@@ -68,7 +68,6 @@
 								<div class="input-group">
 									  <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
 									<select class="form-control" id="zona" name="zona" required>
-									   <option>¿En qué zona se encuentra?</option>
                                         <option value="Capital Federal">Capital Federal</option>
                                         <option value="Zona Sur">Zona Sur</option>
                                         <option value="Zona Oeste">Zona Oeste</option>

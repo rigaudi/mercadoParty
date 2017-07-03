@@ -39,11 +39,10 @@ public class ControladorCargaMensaje {
 // 		Consumidor miConsumidor = servicioconsumidor.consultarUsuarioPorMail(email);
 // 		publicacion.setConsumidor(miConsumidor);
 // 		System.out.println("el id de usuario es"+ miConsumidor.getId());
- 		System.out.println("EL ID DE LONG"+ id);
+
 		Publicacion miPublicacion = servicioPublicacion.consultarPublicacionPorId(id);
 		mensaje.setPublicacion(miPublicacion);
 
-		System.out.println("la publicacion tiene este id"+ miPublicacion.getId());
 		serviciomensaje.guardarMensaje(mensaje);
 		
 

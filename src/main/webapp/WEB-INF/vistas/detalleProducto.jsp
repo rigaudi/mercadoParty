@@ -49,11 +49,11 @@
 							<small>${tipoServicio}</small>
 						</h2>
 						<hr>
-						<h3 class="price-container">direccion:${direccion}</h3>
+						<h3 class="price-container">Direccion: <span>${direccion}</span></h3>
 						<div class="certified">
 							<ul>
-								<li><a href="javascript:void(0);">Telefono<span>15-4041-5647</span></a></li>
-								<li><a href="javascript:void(0);">Email<span>nadia@gmail.com</span></a></li>
+								<li><a href="javascript:void(0);">Telefono<span>${telefono}</span></a></li>
+								<li><a href="javascript:void(0);">Email<span>${email}</span></a></li>
 							</ul>
 						</div>
 						<hr>
