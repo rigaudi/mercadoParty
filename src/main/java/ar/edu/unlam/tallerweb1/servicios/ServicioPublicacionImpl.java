@@ -35,9 +35,9 @@ public class ServicioPublicacionImpl implements ServicioPublicacion{
 	}
 	
 	@Override
-	public List<Publicacion> ListaPublicacion() {
+	public List<Publicacion> ListaPublicacion(String email) {
 		// TODO Auto-generated method stub
-		return servicioPublicacionDao.ListaPublicacion();
+		return servicioPublicacionDao.ListaPublicacion(email);
 	}
 
 
@@ -45,30 +45,3 @@ public class ServicioPublicacionImpl implements ServicioPublicacion{
 
 	
 }
-//
-//@Service ("servicioPublicacion")
-//@Transactional
-//public class ServicioPublicacionImpl implements ServicioPublicacion{
-//	
-//	@Inject
-//	private SessionFactory session;
-//
-//	@Override
-//	public void guardarPublicacion(Publicacion publicacion) {
-//		// TODO Auto-generated method stub
-//
-//		session.getCurrentSession().save(publicacion);
-//	}
-//	
-//	@Override
-//	public Publicacion consultarPublicacion(Publicacion publicacion) {
-//		// TODO Auto-generated method stub
-//		
-//		final Session session = this.session.getCurrentSession();
-//		
-//		return (Publicacion) session.createCriteria(Publicacion.class)
-//				.add(Restrictions.eq("id",1L)).uniqueResult();
-//		
-//	}
-//
-//}

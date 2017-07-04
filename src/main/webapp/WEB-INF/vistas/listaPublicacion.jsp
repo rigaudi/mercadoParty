@@ -34,14 +34,14 @@
 	<tr>
 		<th>${p.tipoServicio}</th>
 		<th>${p.titulo}</th>
-		<th>${p.imagen1}</th>
-		<th>${p.imagen2}</th>
-		<th>${p.imagen3}</th>
+		<th><img src="img/${p.imagen1}" class="img-thumbnail" alt="imagen3" width="50" height="30"></th>
+		<th><img src="img/${p.imagen2}" class="img-thumbnail" alt="imagen3" width="50" height="30"></th>
+		<th><img src="img/${p.imagen3}" class="img-thumbnail" alt="imagen3" width="50" height="30"></th>
 		<th>${p.descripcion}</th>
 		<th>
 			<form:form action="verDetalle" method="POST" modelAttribute="publicacion">
 <%-- 				<input name="name" value="${Name}" size="50" type="text"> --%>
-				<button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Ver Detalle</button>  			
+				<button class="btn btn-primary"  name="Submit" value="Login" type="Submit">Ver Detalle</button>  			
 			</form:form>
 		</th>
 </tr>

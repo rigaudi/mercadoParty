@@ -14,6 +14,6 @@ public interface PublicacionDao {
 
 	Publicacion consultarPublicacionPorId(Long id);
 
-	List<Publicacion> ListaPublicacion();
+	List<Publicacion> ListaPublicacion(String email);
 
 }

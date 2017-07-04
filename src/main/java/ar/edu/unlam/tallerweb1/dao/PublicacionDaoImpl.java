@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import ar.edu.unlam.tallerweb1.modelo.Consumidor;
 import ar.edu.unlam.tallerweb1.modelo.Publicacion;
+import ar.edu.unlam.tallerweb1.servicios.ServicioConsumidor;
 
 
 @Service ("PublicacionDao")
@@ -24,7 +25,8 @@ public class PublicacionDaoImpl implements PublicacionDao {
 	@Inject
 	private SessionFactory sessionFactory;
 	private SessionFactory session;
-
+	@Inject
+	private ServicioConsumidor servicioconsumidor;
 
 	@Override
 	public void guardarPublicacion(Publicacion publicacion) {
@@ -55,12 +57,12 @@ public class PublicacionDaoImpl implements PublicacionDao {
 	
 	@Override
 
-public List<Publicacion> ListaPublicacion(){
-		 //return (Publicacion) session.createCriteria(Publicacion.class).addOrder(Order.desc("complainId")).list();
+	public List<Publicacion> ListaPublicacion(String email){
 		final Session sesion = sessionFactory.getCurrentSession();
-		 return (List<Publicacion>) sesion.createCriteria(Publicacion.class).setFetchMode("Consumidor", FetchMode.JOIN).addOrder(Order.desc("id")).list();
-		
-	}
+ 		Consumidor miConsumidor = servicioconsumidor.consultarUsuarioPorMail(email);
+ 		System.out.println("email en lista es "+ email);
+		 return (List<Publicacion>) sesion.createCriteria(Publicacion.class).add(Restrictions.eq("consumidor.id",miConsumidor.getId())).list();
+}
 
 
 }
