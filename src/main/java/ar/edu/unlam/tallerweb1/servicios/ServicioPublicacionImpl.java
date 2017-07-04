@@ -1,5 +1,7 @@
 package ar.edu.unlam.tallerweb1.servicios;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,6 +33,13 @@ public class ServicioPublicacionImpl implements ServicioPublicacion{
 		// TODO Auto-generated method stub
 		return servicioPublicacionDao.consultarPublicacionPorId(id);
 	}
+	
+	@Override
+	public List<Publicacion> ListaPublicacion() {
+		// TODO Auto-generated method stub
+		return servicioPublicacionDao.ListaPublicacion();
+	}
+
 
 
 

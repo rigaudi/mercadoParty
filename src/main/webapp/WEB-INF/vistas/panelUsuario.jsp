@@ -27,7 +27,7 @@
 
 
 <div class="item">
-<a href="/mercadoParty/listaProductos" class="btn btn-info" role="button">Ver mis Publicaciones</a>
+<a href="/mercadoParty/listaPublicacion" class="btn btn-info" role="button">Ver mis Publicaciones</a>
 </div><br>
 
 <div class="item">

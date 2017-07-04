@@ -1,5 +1,7 @@
 package ar.edu.unlam.tallerweb1.controladores;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
@@ -49,6 +51,16 @@ public class ControladorCargaProducto {
  		return new ModelAndView("detalleProducto", modelo1);
 		}
 	
-
+	@RequestMapping ("listaPublicacion")
+	public ModelAndView listarPublicacion(){
+		List<Publicacion> listapublicacion= serviciopublicacion.ListaPublicacion();
+		ModelMap modelo = new ModelMap();
+		
+		
+		
+		modelo.put("publicacion", listapublicacion);
+		return new ModelAndView ("listaPublicacion", modelo);
+		
+	}
 }
 

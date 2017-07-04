@@ -1,9 +1,15 @@
 
 package ar.edu.unlam.tallerweb1.dao;
 
+import java.util.List;
+
 import javax.inject.Inject;
+
+import org.hibernate.Criteria;
+import org.hibernate.FetchMode;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Service;
 
@@ -46,8 +52,15 @@ public class PublicacionDaoImpl implements PublicacionDao {
 				.uniqueResult();
 	}
 
+	
+	@Override
 
-
+public List<Publicacion> ListaPublicacion(){
+		 //return (Publicacion) session.createCriteria(Publicacion.class).addOrder(Order.desc("complainId")).list();
+		final Session sesion = sessionFactory.getCurrentSession();
+		 return (List<Publicacion>) sesion.createCriteria(Publicacion.class).setFetchMode("Consumidor", FetchMode.JOIN).addOrder(Order.desc("id")).list();
+		
+	}
 
 
 }

@@ -1,5 +1,7 @@
 package ar.edu.unlam.tallerweb1.dao;
 
+import java.util.List;
+
 import ar.edu.unlam.tallerweb1.modelo.Publicacion;
 
 public interface PublicacionDao {
@@ -11,5 +13,7 @@ public interface PublicacionDao {
 
 
 	Publicacion consultarPublicacionPorId(Long id);
+
+	List<Publicacion> ListaPublicacion();
 
 }
