@@ -39,15 +39,15 @@ public class ControladorCargaProducto {
  		String email = (String) request.getSession().getAttribute("session");
  		Consumidor miConsumidor = servicioconsumidor.consultarUsuarioPorMail(email);
  		publicacion.setConsumidor(miConsumidor);
- 		System.out.println("el id de usuario es"+ miConsumidor.getId());
+ 		//System.out.println("el id de usuario es"+ miConsumidor.getId());
  		modelo1.put("email", miConsumidor.getEmail());
  		modelo1.put("direccion", miConsumidor.getDireccion());
  		modelo1.put("telefono", miConsumidor.getTelefono());
- 		System.out.println("telefono"+ miConsumidor.getTelefono());
+ 		//System.out.println("telefono"+ miConsumidor.getTelefono());
  	
   		serviciopublicacion.guardarPublicacion(publicacion);
-  		request.getSession().setAttribute("session", publicacion.getId());
-  		System.out.println("el id de PUBLICACION es"+ publicacion.getId());
+  		request.getSession().setAttribute("publicacionId", publicacion.getId());
+  		//System.out.println("el id de PUBLICACION es"+ publicacion.getId());
  		return new ModelAndView("detalleProducto", modelo1);
 		}
 	

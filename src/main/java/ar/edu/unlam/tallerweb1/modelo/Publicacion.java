@@ -147,4 +147,14 @@ public class Publicacion {
 	public void setConsumidor(Consumidor consumidor){
 		this.consumidor = consumidor;
 	}
+
+	public List<Mensaje> getListaMensaje() {
+		return listaMensaje;
+	}
+
+	public void setListaMensaje(List<Mensaje> listaMensaje) {
+		this.listaMensaje = listaMensaje;
+	}
+	
+	
 }	

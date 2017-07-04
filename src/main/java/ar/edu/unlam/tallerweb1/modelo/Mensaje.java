@@ -33,7 +33,16 @@ public class Mensaje {
 	@ManyToOne
 	@JoinColumn(name = "idPublicacion", nullable = true)
 	private Publicacion publicacion;
-	// constuctores 
+	
+	@ManyToOne
+	@JoinColumn(name = "id", nullable = true)
+	private Consumidor consumidorEmisor;
+	
+	@ManyToOne
+	@JoinColumn(name = "idConsumidor", nullable = true)
+	private Consumidor consumidorReceptor;
+	
+	
 	
 
 
@@ -41,11 +50,12 @@ public class Mensaje {
 		super();
 	}
 
-	public Mensaje(String texto,  Publicacion publicacion) {
+	public Mensaje(String texto,  Publicacion publicacion, Consumidor consumidor, Consumidor consumidorReceptor) {
 			super();
 			this.texto=texto;
-		
+			this.consumidorEmisor = consumidor;		
 			this.publicacion=publicacion;
+			this.consumidorReceptor = consumidorReceptor;
 		}
 
 	// Getters y setters
@@ -77,6 +87,25 @@ public class Mensaje {
 			this.publicacion = publicacion;
 		}
 
+
+
+		public Consumidor getConsumidorEmisor() {
+			return consumidorEmisor;
+		}
+
+		public void setConsumidorEmisor(Consumidor consumidorEmisor) {
+			this.consumidorEmisor = consumidorEmisor;
+		}
+
+		public Consumidor getConsumidorReceptor() {
+			return consumidorReceptor;
+		}
+
+		public void setConsumidorReceptor(Consumidor consumidorReceptor) {
+			this.consumidorReceptor = consumidorReceptor;
+		}
+		
+		
 		
 		
 	}	

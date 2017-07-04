@@ -25,6 +25,7 @@
 		<th>Im2</th>
 		<th>Im3</th>
 		<th>Descripcion</th>
+
 </tr>
 </thead>
 <tbody>
@@ -37,9 +38,20 @@
 		<th>${p.imagen2}</th>
 		<th>${p.imagen3}</th>
 		<th>${p.descripcion}</th>
+		<th>
+			<form:form action="verDetalle" method="POST" modelAttribute="publicacion">
+<%-- 				<input name="name" value="${Name}" size="50" type="text"> --%>
+				<button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Ver Detalle</button>  			
+			</form:form>
+		</th>
 </tr>
 	</c:forEach>
-</tbody>
+	
+<%-- <c:set var="ID" value="5"/>    --%>
+<%-- <c:set var="Name" value="Riyana"/>    --%>
+<!-- <td align="right">Name</td>     -->
+<%-- <td><input name="name" value="${Name}" size="50" type="text"></td> --%>
+<!-- </tbody> -->
 
 
 

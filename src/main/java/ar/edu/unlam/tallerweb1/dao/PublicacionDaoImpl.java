@@ -46,7 +46,7 @@ public class PublicacionDaoImpl implements PublicacionDao {
 	@Override
 	public Publicacion consultarPublicacionPorId(Long id) {
 		final Session sesion = sessionFactory.getCurrentSession();
-		System.out.println("el id en dao es"+ id);
+		//System.out.println("el id en dao es"+ id);
 		return (Publicacion) sesion.createCriteria(Publicacion.class)
 				.add(Restrictions.eq("id", id))
 				.uniqueResult();

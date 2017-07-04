@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import ar.edu.unlam.tallerweb1.modelo.Consumidor;
 import ar.edu.unlam.tallerweb1.modelo.Mensaje;
 import ar.edu.unlam.tallerweb1.modelo.Publicacion;
-
+import ar.edu.unlam.tallerweb1.servicios.ServicioConsumidor;
 import ar.edu.unlam.tallerweb1.servicios.ServicioMensaje;
 import ar.edu.unlam.tallerweb1.servicios.ServicioPublicacion;
 
@@ -24,6 +24,8 @@ public class ControladorCargaMensaje {
 	
 	@Inject
 	private ServicioPublicacion servicioPublicacion;
+	@Inject
+	private ServicioConsumidor servicioConsumidor;
 	
 
 
@@ -35,13 +37,20 @@ public class ControladorCargaMensaje {
  		//modelo1.put("texto", mensaje.getTexto());
  
 
- 		Long id = (Long) request.getSession().getAttribute("session");
-// 		Consumidor miConsumidor = servicioconsumidor.consultarUsuarioPorMail(email);
-// 		publicacion.setConsumidor(miConsumidor);
-// 		System.out.println("el id de usuario es"+ miConsumidor.getId());
-
-		Publicacion miPublicacion = servicioPublicacion.consultarPublicacionPorId(id);
+ 		Long idPublicacion = (Long) request.getSession().getAttribute("publicacionId");
+ 		Long idConsumidorReceptor = (Long) request.getSession().getAttribute("logueadoId");
+ 		System.out.println("controler mensaje el ID DEL CONSUMIDOR RECEPTOR ES"+ idConsumidorReceptor);
+ 		System.out.println("El id de la publicacion es "  + idPublicacion);
+		Publicacion miPublicacion = servicioPublicacion.consultarPublicacionPorId(idPublicacion);
+		Consumidor consumidorPublicacion = miPublicacion.getConsumidor();
+		mensaje.setConsumidorReceptor(consumidorPublicacion);
 		mensaje.setPublicacion(miPublicacion);
+		String email = (String) request.getSession().getAttribute("session");
+ 		Consumidor miConsumidor = servicioConsumidor.consultarUsuarioPorMail(email);
+ 		mensaje.setConsumidorEmisor(miConsumidor);
+ 		System.out.println("el ID DEL CONSUMIDOR RECEPTOR ES"+ miPublicacion.getId());
+ 		System.out.println("el ID DEL CONSUMIDOR RECEPTOR ES"+ miConsumidor.getId());
+		
 
 		serviciomensaje.guardarMensaje(mensaje);
 		
