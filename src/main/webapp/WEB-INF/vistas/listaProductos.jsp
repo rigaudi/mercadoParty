@@ -32,19 +32,19 @@
     </div>
     <div id="products" class="row list-group">
     
-    <c:forEach var = "i" begin = "1" end = "6">
+   <c:forEach items="${publicacion}" var="p">
          <div class="item  col-xs-3 col-lg-3">
             <div class="thumbnail">
-                <img class="group list-group-image" src="img/nadialogo.png" alt="" />
+                <img class="group list-group-image" src="img/ ${p.imagen1}" alt="" />
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
-                      ${titulo}</h4>
+                      ${p.tipoServicio}</h4>
                     <p class="group inner list-group-item-text">
-                        ${descripcion}</p>
+                        ${p.titulo}</p>
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <p class="lead">
-                                $1.000</p>
+                                ${p.descripcion}</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <a class="btn btn-success" href="/mercadoParty/detalleProducto">Contactar</a>

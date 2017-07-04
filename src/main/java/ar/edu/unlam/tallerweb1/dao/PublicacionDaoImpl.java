@@ -64,5 +64,12 @@ public class PublicacionDaoImpl implements PublicacionDao {
 		 return (List<Publicacion>) sesion.createCriteria(Publicacion.class).add(Restrictions.eq("consumidor.id",miConsumidor.getId())).list();
 }
 
+	@Override
+
+	public List<Publicacion> ListaProductos(){
+		final Session sesion = sessionFactory.getCurrentSession();
+		return (List<Publicacion>) sesion.createCriteria(Publicacion.class).setFetchMode("Consumidor", FetchMode.JOIN).addOrder(Order.desc("id")).list();
+}
+
 
 }

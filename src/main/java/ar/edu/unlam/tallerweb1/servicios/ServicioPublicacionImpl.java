@@ -40,6 +40,11 @@ public class ServicioPublicacionImpl implements ServicioPublicacion{
 		return servicioPublicacionDao.ListaPublicacion(email);
 	}
 
+	@Override
+	public List<Publicacion> ListaProducto() {
+		// TODO Auto-generated method stub
+		return servicioPublicacionDao.ListaProductos();
+	}
 
 
 
