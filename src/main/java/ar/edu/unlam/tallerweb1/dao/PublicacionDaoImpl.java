@@ -60,7 +60,6 @@ public class PublicacionDaoImpl implements PublicacionDao {
 	public List<Publicacion> ListaPublicacion(String email){
 		final Session sesion = sessionFactory.getCurrentSession();
  		Consumidor miConsumidor = servicioconsumidor.consultarUsuarioPorMail(email);
- 		System.out.println("email en lista es "+ email);
 		 return (List<Publicacion>) sesion.createCriteria(Publicacion.class).add(Restrictions.eq("consumidor.id",miConsumidor.getId())).list();
 }
 

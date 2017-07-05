@@ -28,8 +28,8 @@ public class ControladorDetalleProducto {
  		Consumidor usuario = new Consumidor();
  		modelo.put("usuario", usuario);
  		modelo1.put("usuario", usuario.getDireccion() );
- 		System.out.println(usuario.getDireccion());
- 		System.out.println(publicacion.getDescripcion());
+// 		System.out.println(usuario.getDireccion());
+// 		System.out.println(publicacion.getDescripcion());
  		return new ModelAndView ("detalleProducto", modelo);
  	}
 	

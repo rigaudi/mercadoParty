@@ -31,7 +31,7 @@ public class ConsumidorDaoImpl implements ConsumidorDao {
 	@Override
 	public Consumidor consultarUsuarioPorMail (String email) {
 		final Session sesion = session.getCurrentSession();
-		System.out.println("el mail en dao es"+ email);
+//		System.out.println("el mail en dao es"+ email);
 		return (Consumidor) sesion.createCriteria(Consumidor.class)
 				.add(Restrictions.eq("email", email))
 				.uniqueResult();

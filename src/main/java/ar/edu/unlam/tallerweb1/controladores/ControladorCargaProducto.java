@@ -58,8 +58,7 @@ public class ControladorCargaProducto {
 		String email = (String) request.getSession().getAttribute("session");
  		Consumidor miConsumidor = servicioconsumidor.consultarUsuarioPorMail(email);
  		publicacion.setConsumidor(miConsumidor);
- 		System.out.println("el id de usuario es"+ miConsumidor.getId());
-		
+// 		System.out.println("el id de usuario es"+ miConsumidor.getId());
 		List<Publicacion> listapublicacion= serviciopublicacion.ListaPublicacion(email);
 		modelo.put("publicacion", listapublicacion);
 		return new ModelAndView ("listaPublicacion", modelo);

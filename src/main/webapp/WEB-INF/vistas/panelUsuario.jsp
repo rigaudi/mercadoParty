@@ -31,7 +31,7 @@
 </div><br>
 
 <div class="item">
-<a href="/mercadoParty/agregarPublicacion" class="btn btn-info" role="button">Ver Mensajes</a>
+<a href="/mercadoParty/listarMensajes" class="btn btn-info" role="button">Ver Mensajes</a>
 </div><br>
 </div>
 </div>

@@ -31,14 +31,8 @@ public class ControladorListaProductos {
 		
 		List<Publicacion> listaProducto= servicioPublicacion.ListaProducto();
 			ModelMap modelo = new ModelMap();
-			
-			
 			modelo.put("publicacion", listaProducto);
 			return new ModelAndView ("listaProductos", modelo);
-
-
-		
-		
 		}
 		
 	}

@@ -37,7 +37,7 @@ public ModelAndView validarLogin(@ModelAttribute("usuario")Consumidor usuario,  
 		return new ModelAndView("redirect:/panelUsuario");
 	} else {
 		model.put("error", "Usuario o clave incorrecta");
-		System.out.println("Usuario o clave incorrecta\n");
+//		System.out.println("Usuario o clave incorrecta\n");
 	}
 	return new ModelAndView("home", model);
 }
