@@ -48,15 +48,15 @@
 
 
 				<div class="form-group">
-                    <input name="imagen1" id="imagen1" type="file" class="file" multiple=false data-preview-file-type="any" required>
+                    <input name="imagen1" id="imagen1" type="file" class="file"  data-preview-file-type="any" required>
                 </div>
                 
                 <div class="form-group">
-                    <input name="imagen2" id="imagen2" type="file" class="file" multiple=false data-preview-file-type="any" required>
+                    <input name="imagen2" id="imagen2" type="file" class="file" data-preview-file-type="any" required>
                 </div>
                 
                 <div class="form-group">
-                    <input name="imagen3" id="imagen3" type="file" class="file" multiple=false data-preview-file-type="any" required>
+                    <input name="imagen3" id="imagen3" type="file" class="file"  data-preview-file-type="any" required>
                 </div>
 
 

@@ -18,4 +18,6 @@ public interface PublicacionDao {
 
 	List<Publicacion> ListaProductos(String palabraBuscada);
 
+	void eliminarPublicacion(Publicacion miPublicacion);
+
 }

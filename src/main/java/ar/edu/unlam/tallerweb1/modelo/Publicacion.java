@@ -13,6 +13,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 @Entity
 @Table(name = "publicacion")
 public class Publicacion {
@@ -45,9 +48,11 @@ public class Publicacion {
 	
 	@ManyToOne
 	@JoinColumn(name = "idConsumidor", nullable = true)
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	private Consumidor consumidor;
 	
 	@OneToMany(mappedBy="publicacion" )
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	private List<Mensaje> listaMensaje;
 	// constuctores 
 	

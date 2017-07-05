@@ -64,5 +64,19 @@ public class ControladorCargaProducto {
 		return new ModelAndView ("listaPublicacion", modelo);
 		
 	}
+	
+	@RequestMapping ("eliminaPublicacion")
+	public ModelAndView eliminarPublicacion(@ModelAttribute("publicacion")Publicacion publicacion,@ModelAttribute("usuario") Consumidor usuario, HttpServletRequest request){
+		
+		ModelMap modelo = new ModelMap();
+		Long idPublicacion = publicacion.getId();
+		Publicacion miPublicacion = serviciopublicacion.consultarPublicacionPorId(idPublicacion);		String email = (String) request.getSession().getAttribute("session");
+ 		Consumidor miConsumidor = servicioconsumidor.consultarUsuarioPorMail(email);
+ 		serviciopublicacion.eliminarPublicacion(miPublicacion);
+		return new ModelAndView ("panelUsuario");
+		
+	}
+	
+
 }
 

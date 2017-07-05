@@ -11,5 +11,6 @@ public interface ServicioPublicacion {
 	Publicacion consultarPublicacionPorId (Long id);
 	List<Publicacion> ListaPublicacion(String email);
 	List<Publicacion> ListaProducto(String palabraBuscada);
+	void eliminarPublicacion(Publicacion miPublicacion);
 
 }

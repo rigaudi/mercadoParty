@@ -71,4 +71,15 @@ public class PublicacionDaoImpl implements PublicacionDao {
 }
 
 
+	@Override
+	public void eliminarPublicacion(Publicacion miPublicacion) {
+		final Session sesion = sessionFactory.getCurrentSession();
+		System.out.println("id publicacion es" + miPublicacion.getId());
+		Publicacion delPublicacion = (Publicacion) sesion.createCriteria(Publicacion.class)
+		             .add(Restrictions.eq("id", miPublicacion.getId())).uniqueResult();
+		sesion.delete(delPublicacion);
+
+			
+	}
+
 }

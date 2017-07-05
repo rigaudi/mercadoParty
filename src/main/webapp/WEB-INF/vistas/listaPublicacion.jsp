@@ -51,6 +51,12 @@
   			
 			</form:form>
 		</th>
+		<th>
+            <form:form action="eliminaPublicacion" method="POST" modelAttribute="publicacion">
+				<input name="id" id="id" type="hidden" value="${p.id}" size="50" type="text">
+				<button class="btn btn-warning"  name="Submit" value="Login" type="Submit">Eliminar</button>
+			</form:form>
+         <th>
 </tr>
 	</c:forEach>
 </tbody>

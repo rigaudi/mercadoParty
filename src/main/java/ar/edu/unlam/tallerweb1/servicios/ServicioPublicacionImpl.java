@@ -46,6 +46,13 @@ public class ServicioPublicacionImpl implements ServicioPublicacion{
 		return servicioPublicacionDao.ListaProductos(palabraBuscada);
 	}
 
+	@Override
+	public void eliminarPublicacion(Publicacion miPublicacion) {
+		// TODO Auto-generated method stub
+		 servicioPublicacionDao.eliminarPublicacion(miPublicacion);
+
+	}
+
 
 
 	
