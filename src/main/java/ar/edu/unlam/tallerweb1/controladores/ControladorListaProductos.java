@@ -23,9 +23,9 @@ public class ControladorListaProductos {
 	
 
 	@RequestMapping (path="listaProductos", method = RequestMethod.POST)
-	public ModelAndView listarProducto(@ModelAttribute("publicacion")Publicacion publicacion, @ModelAttribute("usuario") Consumidor usuario,@ModelAttribute("palabraBuscada") String palabraBuscada, HttpServletRequest request){
-		System.out.println("la palabra buscada es "+ palabraBuscada);
-		List<Publicacion> listaProducto= servicioPublicacion.ListaProducto(palabraBuscada);
+	public ModelAndView listarProducto(@ModelAttribute("publicacion")Publicacion publicacion, @ModelAttribute("usuario") Consumidor usuario,@ModelAttribute("palabraBuscada") String palabraBuscada, @ModelAttribute("tipoServicio") String tipoServicio, HttpServletRequest request){
+		System.out.println("la zona buscada es "+ tipoServicio);
+		List<Publicacion> listaProducto= servicioPublicacion.ListaProducto(palabraBuscada, tipoServicio);
 		ModelMap modelo = new ModelMap();
 		modelo.put("publicacion", listaProducto);
 		return new ModelAndView ("listaProductos", modelo);

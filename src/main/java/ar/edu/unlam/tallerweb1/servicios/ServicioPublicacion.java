@@ -10,7 +10,7 @@ public interface ServicioPublicacion {
 	Publicacion consultarPublicacion(Publicacion publicacion);
 	Publicacion consultarPublicacionPorId (Long id);
 	List<Publicacion> ListaPublicacion(String email);
-	List<Publicacion> ListaProducto(String palabraBuscada);
+	List<Publicacion> ListaProducto(String palabraBuscada, String tipoServicio);
 	void eliminarPublicacion(Publicacion miPublicacion);
 
 }

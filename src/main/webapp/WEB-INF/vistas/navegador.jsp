@@ -19,12 +19,17 @@
                                 <form:form class="form-horizontal" action="/mercadoParty/listaProductos" method="POST">
                                   <div class="form-group">
                                     <label for="filter">Filtrar Por Zona</label>
-                                    <select class="form-control">
-                                        <option value="0" selected>Todas las zonas</option>
-                                        <option value="1">Capital Federal</option>
-                                        <option value="2">Zona Sur</option>
-                                        <option value="3">Zona Norte</option>
-                                        <option value="4">Zona Oeste</option>
+                                    <label for="filter">Filtrar Por Servicio</label>
+                                    <select name="tipoServicio" class="form-control">
+                                        <option selected>Todos los servicios</option>
+                                        <option value="Catering">Catering</option>
+                                        <option value="Alquiler de equipamiento">Alquiler de equipamiento</option>
+                                        <option value="Alquiler de indumentaria">Alquiler de indumentaria</option>
+                                        <option value="Salones y quintas">Salones y quintas</option>
+                                        <option value="Entretenimiento">Entretenimiento</option>
+                                        <option value="Bebidas">Bebidas</option>
+                                        <option value="Vehiculos para eventos">Vehiculos para eventos</option>
+                                        <option value="Servicios audiovisuales">Servicios audiovisuales</option>
                                     </select>
                                   </div>
                                   <button value="/mercadoParty/listaProductos" type="submit"  class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>

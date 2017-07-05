@@ -16,7 +16,7 @@ public interface PublicacionDao {
 
 	List<Publicacion> ListaPublicacion(String email);
 
-	List<Publicacion> ListaProductos(String palabraBuscada);
+	List<Publicacion> ListaProductos(String palabraBuscada, String tipoServicio);
 
 	void eliminarPublicacion(Publicacion miPublicacion);
 
