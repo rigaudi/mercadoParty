@@ -40,18 +40,16 @@
 		<th>${p.descripcion}</th>
 		<th>
 			<form:form action="detalleProducto" method="POST" modelAttribute="publicacion">
-<%-- 				<input name="name" value="${Name}" size="50" type="text"> --%>
+				<input name="id" id="id" type="hidden" value="${p.id}" size="50" type="text">
+				<input name="tipoServicio" id="tipoServicio" type="hidden" value="${p.tipoServicio}" size="50" type="text">
+				<input name="titulo" id="titulo" type="hidden" value="${p.titulo}" size="50" type="text">
+				<input name="imagen1" id="imagen1" type="hidden" type="file" class="file" data-preview-file-type="any" required>
 				<button class="btn btn-primary"  name="Submit" value="Login" type="Submit">Ver Detalle</button>  			
 			</form:form>
 		</th>
 </tr>
 	</c:forEach>
-	
-<%-- <c:set var="ID" value="5"/>    --%>
-<%-- <c:set var="Name" value="Riyana"/>    --%>
-<!-- <td align="right">Name</td>     -->
-<%-- <td><input name="name" value="${Name}" size="50" type="text"></td> --%>
-<!-- </tbody> -->
+</tbody>
 
 
 

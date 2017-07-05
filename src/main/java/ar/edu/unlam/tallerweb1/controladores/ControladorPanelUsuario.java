@@ -65,8 +65,7 @@ public class ControladorPanelUsuario {
 	
 
 	@RequestMapping ("/listarMensajes")
-	public ModelAndView listarMensajes(@ModelAttribute("mensaje")Mensaje mensaje,@ModelAttribute("usuario") Consumidor usuario, HttpServletRequest request){
-		
+	public ModelAndView listarMensajes(@ModelAttribute("publicacion")Publicacion publicacion, @ModelAttribute("mensaje")Mensaje mensaje,@ModelAttribute("usuario") Consumidor usuario, HttpServletRequest request){
 		ModelMap modelo = new ModelMap();
 		String email = (String) request.getSession().getAttribute("session");
 		System.out.println("El email de la session es " + email);
