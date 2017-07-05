@@ -21,9 +21,9 @@
 <tr>
 		<th>Tipo Servicio</th>
 		<th>Titulo</th>
-		<th>Im1</th>
-		<th>Im2</th>
-		<th>Im3</th>
+		<th>Imagen</th>
+		<th>Imagen</th>
+		<th>Imagen</th>
 		<th>Descripcion</th>
 
 </tr>
@@ -39,7 +39,7 @@
 		<th><img src="img/${p.imagen3}" class="img-thumbnail" alt="imagen3" width="50" height="30"></th>
 		<th>${p.descripcion}</th>
 		<th>
-			<form:form action="verDetalle" method="POST" modelAttribute="publicacion">
+			<form:form action="detalleProducto" method="POST" modelAttribute="publicacion">
 <%-- 				<input name="name" value="${Name}" size="50" type="text"> --%>
 				<button class="btn btn-primary"  name="Submit" value="Login" type="Submit">Ver Detalle</button>  			
 			</form:form>
