@@ -13,15 +13,25 @@
 	<br/>
 <!-- Inicio Form-->
 
-
-<div class="container ">
+<script>window.setTimeout(function() {
+                    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                    $(this).remove(); 
+                    }); }, 2400);
+            </script>
+    <div class="bs-example">
+          <div class="alert alert-warning">
+            <span class="close" data-dismiss="alert">&times;</span>
+            <strong>Atencion! </strong> Debes estar registrado para contactar esta persona</div>
+        </div>
 			<div class="row main">
+			
 				<div class="main-login main-center">
 
 				 <ul class="nav nav-tabs">
 
 				<li class="active" ><a data-toggle="tab" href="#menu1">Registrate</a></li>
 				    </ul>
+
 
 
 				<div class="col-sm-4 col-sm-offset-4">    

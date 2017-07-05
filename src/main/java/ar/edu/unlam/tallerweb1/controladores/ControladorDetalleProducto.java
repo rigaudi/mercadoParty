@@ -20,7 +20,11 @@ public class ControladorDetalleProducto {
   	
 
  	@RequestMapping(path = "/detalleProducto", method = RequestMethod.POST)
+ 
+ 	
  	public ModelAndView addPublicacion (@ModelAttribute("publicacion")Publicacion publicacion,@ModelAttribute("usuario") Consumidor usuario, HttpServletRequest request){
+ 	
+ 		if(request.getSession().getAttribute("session") != null){
  		ModelMap modelo1 = new ModelMap();
  		modelo1.put("id", publicacion.getId());
  		modelo1.put("titulo", publicacion.getTitulo());
@@ -38,6 +42,11 @@ public class ControladorDetalleProducto {
   		request.getSession().setAttribute("publicacionId", publicacion.getId());
  		return new ModelAndView ("detalleProducto", modelo1);
  	}
+ 		ModelMap modelo = new ModelMap();
+		Consumidor usuario1 = new Consumidor();
+		modelo.put("usuario", usuario1);
+		return new ModelAndView("registroNuevo");
 	
-	
+ }
+ 	
 }

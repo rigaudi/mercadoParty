@@ -47,7 +47,16 @@
                                 ${p.descripcion}</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="/mercadoParty/detalleProducto">Contactar</a>
+                        <form:form action="detalleProducto" method="POST" modelAttribute="publicacion">
+							<input name="id" id="id" type="hidden" value="${p.id}" size="50" type="text">
+							<input name="tipoServicio" id="tipoServicio" type="hidden" value="${p.tipoServicio}" size="50" type="text">
+							<input name="titulo" id="titulo" type="hidden" value="${p.titulo}" size="50" type="text">
+							<input name="imagen1" id="imagen1" type="hidden" value="${p.imagen1}" type="file" class="file" data-preview-file-type="any" required>
+							<input name="imagen2" id="imagen2" type="hidden" value="${p.imagen2}" type="file" class="file" data-preview-file-type="any" required>
+							<input name="imagen3" id="imagen3" type="hidden" value="${p.imagen3}" type="file" class="file" data-preview-file-type="any" required>
+							<input name="descripcion" id="descripcion" type="hidden" value="${p.descripcion}" size="500" type="text">
+							<button class="btn btn-primary"  name="Submit" value="Login" type="Submit">Contactar</button>
+						</form:form>
                         </div>
                     </div>
                 </div>
