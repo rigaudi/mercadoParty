@@ -1,4 +1,4 @@
- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="es">
@@ -15,8 +15,6 @@
 <c:if test="${session != null}" > 	
 	<jsp:include page="navegadorlogueado.jsp" />
 </c:if>
-
-
 
 <div class="container">
 <div class="col-md-6 col-md-offset-3">
@@ -36,12 +34,12 @@
 <a href="/mercadoParty/listarMensajes" class="btn btn-info" role="button">Ver Mensajes</a>
 </div><br>
 
-<c:if test="${session == 'pepito@gmail.com'}" > 
+
 <div class="item">
 <a href="/mercadoParty/listaConsumidores" class="btn btn-info" role="button">Ver Usuarios</a>
 </div><br>
 
-</c:if>
+
 </div>
 </div>
 <jsp:include page="footer.jsp" />

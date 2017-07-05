@@ -50,6 +50,14 @@
 						<div class="form-group">
 								
 									<div class="input-group">
+									  <span class="input-group-addon" id="basic-addon1">@</span>
+									  <input type="text" class="form-control" name="tipoConsumidor" id="tipoConsumidor" value="Consumidor Regular" aria-describedby="basic-addon1" readonly="readonly">
+									</div>
+								
+						</div>
+						<div class="form-group">
+								
+									<div class="input-group">
 									  <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
 									  <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Teléfono" aria-describedby="basic-addon1" required>
 									</div>

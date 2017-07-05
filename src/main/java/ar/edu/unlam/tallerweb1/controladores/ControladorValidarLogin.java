@@ -31,10 +31,9 @@ public ModelAndView validarLogin(@ModelAttribute("usuario")Consumidor usuario,  
  		Consumidor miConsumidor = servicioConsumidor.consultarUsuarioPorMail(email);
 		request.getSession().setAttribute("logueadoId", miConsumidor.getId());
 		request.getSession().setAttribute("publicacionId", miConsumidor.getId());
+		request.getSession().setAttribute("nombre", miConsumidor.getNombre());
 		
-
-		
-		return new ModelAndView("redirect:/panelUsuario");
+		return new ModelAndView("redirect:/panelUsuario");		
 	} else {
 		model.put("error", "Usuario o clave incorrecta");
 //		System.out.println("Usuario o clave incorrecta\n");

@@ -70,7 +70,8 @@ public class ControladorCargaProducto {
 		
 		ModelMap modelo = new ModelMap();
 		Long idPublicacion = publicacion.getId();
-		Publicacion miPublicacion = serviciopublicacion.consultarPublicacionPorId(idPublicacion);		String email = (String) request.getSession().getAttribute("session");
+		Publicacion miPublicacion = serviciopublicacion.consultarPublicacionPorId(idPublicacion);		
+		String email = (String) request.getSession().getAttribute("session");
  		Consumidor miConsumidor = servicioconsumidor.consultarUsuarioPorMail(email);
  		serviciopublicacion.eliminarPublicacion(miPublicacion);
 		return new ModelAndView ("panelUsuario");

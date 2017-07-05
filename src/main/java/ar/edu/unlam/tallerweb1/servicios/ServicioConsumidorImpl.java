@@ -1,5 +1,7 @@
 package ar.edu.unlam.tallerweb1.servicios;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
@@ -26,6 +28,24 @@ public class ServicioConsumidorImpl implements ServicioConsumidor{
 	public Consumidor consultarUsuarioPorMail(String email) {
 		
 		return servicioConsumidorDao.consultarUsuarioPorMail(email);
+	}
+
+	@Override
+	public List<Consumidor> ListaConsumidor(String palabraBuscada, String tipoServicio) {
+		// TODO Auto-generated method stub
+		return servicioConsumidorDao.ListaConsumidor(palabraBuscada, tipoServicio);
+	}
+
+	@Override
+	public Consumidor consultarConsumidorPorId(Long idConsumidor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void eliminarConsumidor(Consumidor miConsumidor) {
+		servicioConsumidorDao.eliminarConsumidor(miConsumidor);
+		
 	}
 	
 	

@@ -23,6 +23,10 @@ public class Consumidor {
 	@Column(name = "id")
 	private Long id;
 	
+	@Column(name = "tipoConsumidor", length = 50)
+	private String tipoConsumidor;	
+		
+	
 	@Column(name = "nombre", length = 50)
 	private String nombre;	
 	
@@ -51,8 +55,9 @@ public class Consumidor {
 	}
  
 
-	public Consumidor(String nombreConsumidor, String emailConsumidor, Long telefonoConsumidor, String direccionConsumidor, String zonaConsumidor, String passwordConsumidor) {
+	public Consumidor(String nombreConsumidor, String tipoConsumidor, String emailConsumidor, Long telefonoConsumidor, String direccionConsumidor, String zonaConsumidor, String passwordConsumidor) {
 		super();
+		this.tipoConsumidor = tipoConsumidor;
 		this.nombre = nombreConsumidor;
 		this.email = emailConsumidor;
 		this.telefono = telefonoConsumidor;
@@ -72,6 +77,16 @@ public class Consumidor {
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
+	public String getTipoConsumidor() {
+		return tipoConsumidor;
+	}
+
+	public void setTipoConsumidor(String tipoConsumidor) {
+		this.tipoConsumidor = tipoConsumidor;
+	}
+
+
 	public String getNombre() {
 		return nombre;
 	}

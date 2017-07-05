@@ -37,6 +37,8 @@ public class ControladorPanelUsuario {
 			ModelMap modelo = new ModelMap();
 			Consumidor usuario = new Consumidor();
 			modelo.put("usuario", usuario);
+			
+			
 			return new ModelAndView("panelUsuario", modelo);
 		}
 		ModelMap modelo = new ModelMap();
