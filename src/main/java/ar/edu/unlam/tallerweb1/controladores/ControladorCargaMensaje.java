@@ -45,7 +45,7 @@ public class ControladorCargaMensaje {
  		System.out.println("el ID DEL CONSUMIDOR RECEPTOR ES"+ miPublicacion.getId());
  		System.out.println("el ID DEL CONSUMIDOR RECEPTOR ES"+ miConsumidor.getId());
 		serviciomensaje.guardarMensaje(mensaje);
- 		return new ModelAndView("detalleProducto");
+ 		return new ModelAndView("panelUsuario");
 		}
 	
 
