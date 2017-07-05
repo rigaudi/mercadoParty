@@ -32,7 +32,7 @@
     					
      					 <h3>Comenzá ahora, registrate y oferta tu servicio!</h3>
 
-						<form:form action="/mercadoParty/agregarConsumidor" method="POST" modelAttribute="usuario">
+						<form:form action="/mercadoParty/agregarConsumidor" method="GET" modelAttribute="usuario">
 						<div class="form-group">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>

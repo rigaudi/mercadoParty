@@ -41,9 +41,9 @@ public class ServicioPublicacionImpl implements ServicioPublicacion{
 	}
 
 	@Override
-	public List<Publicacion> ListaProducto() {
+	public List<Publicacion> ListaProducto(String palabraBuscada) {
 		// TODO Auto-generated method stub
-		return servicioPublicacionDao.ListaProductos();
+		return servicioPublicacionDao.ListaProductos(palabraBuscada);
 	}
 
 

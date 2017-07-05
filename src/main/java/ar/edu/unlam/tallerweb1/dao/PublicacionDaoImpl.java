@@ -65,9 +65,9 @@ public class PublicacionDaoImpl implements PublicacionDao {
 
 	@Override
 
-	public List<Publicacion> ListaProductos(){
+	public List<Publicacion> ListaProductos(String palabraBuscada){
 		final Session sesion = sessionFactory.getCurrentSession();
-		return (List<Publicacion>) sesion.createCriteria(Publicacion.class).setFetchMode("Consumidor", FetchMode.JOIN).addOrder(Order.desc("id")).list();
+		return (List<Publicacion>) sesion.createCriteria(Publicacion.class).add(Restrictions.like("descripcion", "%"+palabraBuscada+"%")).list();
 }
 
 

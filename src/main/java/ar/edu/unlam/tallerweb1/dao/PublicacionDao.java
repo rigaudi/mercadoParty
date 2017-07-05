@@ -15,7 +15,7 @@ public interface PublicacionDao {
 	Publicacion consultarPublicacionPorId(Long id);
 
 	List<Publicacion> ListaPublicacion(String email);
-	
-	List<Publicacion> ListaProductos();
+
+	List<Publicacion> ListaProductos(String palabraBuscada);
 
 }

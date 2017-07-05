@@ -7,31 +7,34 @@
 		</div>
   
 		<div class="col-sm-6" id="segundacolumna">
+		<form:form class="form-horizontal" action="/mercadoParty/listaProductos" method="POST">
 	            <div class="input-group" id="adv-search">
-                <input type="text" class="form-control" placeholder="Buscar Servicios" />
+                <input type="text" name="palabraBuscada" id="palabraBuscada" class="form-control" placeholder="Buscar Servicios" />
                 <div class="input-group-btn">
                     <div class="btn-group" role="group">
                         <div class="dropdown dropdown-lg">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
                             <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <form class="form-horizontal" action="/mercadoParty/listaProductos" role="form">
+                                
                                   <div class="form-group">
                                     <label for="filter">Filtrar por Zona</label>
                                     <select class="form-control">
-                                        <option value="0" selected>Capital Federal</option>
-                                        <option value="1">Zona Sur</option>
-                                        <option value="2">Zona Oeste</option>
-                                        <option value="3">Zona Norte</option>
+                                        <option value="1" selected></option>
+                                        <option value="2">Capital Federal</option>
+                                        <option value="3">Zona Sur</option>
+                                        <option value="4">Zona Oeste</option>
+                                        <option value="5">Zona Norte</option>
                                     </select>
                                   </div>
-                                  <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                                </form>
+
+                                
                             </div>
                         </div>
                        <a href="/mercadoParty/listaProductos"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></a>
                     </div>
                 </div>
             </div>
+           </form:form>
   		</div>
   
 		<div class="col-sm-3" id="terceracolumna">      

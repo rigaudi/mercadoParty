@@ -31,12 +31,6 @@ public class ControladorCargaMensaje {
 
 	@RequestMapping(path ="/cargarMensaje", method = RequestMethod.POST)
 	public ModelAndView cargarMensaje(@ModelAttribute("mensaje")Mensaje mensaje,@ModelAttribute("publicacion")Publicacion publicacion, @ModelAttribute("usuario")Consumidor usuario, HttpServletRequest request){
-		//ModelMap modelo1 = new ModelMap();
- 		//Publicacion publicacion = new Publicacion();
-		//modelo1.put("idMensaje", mensaje.getIdMensaje());
- 		//modelo1.put("texto", mensaje.getTexto());
- 
-
  		Long idPublicacion = (Long) request.getSession().getAttribute("publicacionId");
  		Long idConsumidorReceptor = (Long) request.getSession().getAttribute("logueadoId");
  		System.out.println("controler mensaje el ID DEL CONSUMIDOR RECEPTOR ES"+ idConsumidorReceptor);
@@ -50,12 +44,7 @@ public class ControladorCargaMensaje {
  		mensaje.setConsumidorEmisor(miConsumidor);
  		System.out.println("el ID DEL CONSUMIDOR RECEPTOR ES"+ miPublicacion.getId());
  		System.out.println("el ID DEL CONSUMIDOR RECEPTOR ES"+ miConsumidor.getId());
-		
-
 		serviciomensaje.guardarMensaje(mensaje);
-		
-
-		
  		return new ModelAndView("detalleProducto");
 		}
 	
