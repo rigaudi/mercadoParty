@@ -20,16 +20,12 @@
                                   <div class="form-group">
                                     <label for="filter">Filtrar Por Zona</label>
                                     <select class="form-control">
-                                        <option value="0" selected>Todas las zonas</option>
+                                        <option selected>Todas las zonas</option>
                                         <option value="1">Capital Federal</option>
                                         <option value="2">Zona Sur</option>
                                         <option value="3">Zona Norte</option>
                                         <option value="4">Zona Oeste</option>
                                     </select>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="contain">Descripcion contiene</label>
-                                    <input type="text" name="palabraBuscada" id="palabraBuscada" class="form-control" placeholder="Buscar Servicios"/>
                                   </div>
                                   <button value="/mercadoParty/listaProductos" type="submit"  class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                                 </form:form>

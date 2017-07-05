@@ -27,10 +27,6 @@
                                         <option value="4">Zona Oeste</option>
                                     </select>
                                   </div>
-                                  <div class="form-group">
-                                    <label for="contain">Descripcion contiene</label>
-                                    <input type="text" name="palabraBuscada" id="palabraBuscada" class="form-control" placeholder="Buscar Servicios"/>
-                                  </div>
                                   <button value="/mercadoParty/listaProductos" type="submit"  class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                                 </form:form>
                             </div>

@@ -35,7 +35,7 @@
    <c:forEach items="${publicacion}" var="p">
          <div class="item  col-xs-3 col-lg-3">
             <div class="thumbnail">
-                <img class="group list-group-image" src="img/ ${p.imagen1}" alt="" />
+                <img class="group list-group-image" src="img/ ${p.imagen1}" width="250" height="160" alt="" />
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
                       ${p.tipoServicio}</h4>
